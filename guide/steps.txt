@@ -1,2 +1,3 @@
 1. jeg ændre editor config til 4 indent size
 2. Bruger Analyse code til at tilføje line terminators
+3. Formatere kode efter nye regler
