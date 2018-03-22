@@ -1,17 +1,20 @@
 <template>
     <div id="app">
         <img src="./assets/logo.png">
-        <HelloWorld/>
+        <games-view></games-view>
+        <games-details-view></games-details-view>
     </div>
 </template>
 
 <script>
-    import HelloWorld from './components/HelloWorld'
+    import gamesView from './views/games-view'
+    import gamesDetailsView from './views/game-details-view'
 
     export default {
-        name: 'App',
+        name: 'hybrid-app',
         components: {
-            HelloWorld
+            gamesView,
+            gamesDetailsView
         }
     }
 </script>

@@ -3,3 +3,28 @@
 3. Formatere kode efter nye regler
 4. Tilføjer @types for de forskellige komponenter
 5. Safe reload slået fra
+
+
+
+
+
+
+
+notes:
+
+components:
+
+- må ikke bruge store, men skal bruge events for at kommunikere med parent som så kalder store.
+- Det gør componenten universal så den ikke er afhængig af den context som den befinder sig i.
+
+
+views:
+
+- må kalde actions
+- må bruge store
+- normalt vil views være bundet til en route, men da hybrid apps ikke kan have routes vil de være implementeret som componenter.
+
+
+modules:
+- der er ikke et en-en relationship mellem et view og et modul. Typisk vil der være flere views der deler et modul.
+
