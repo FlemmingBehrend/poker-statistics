@@ -1,31 +1,34 @@
 <template>
     <div id="app">
-        <img src="./assets/logo.png">
-        <games-view></games-view>
-        <games-details-view></games-details-view>
+        <attendance-container></attendance-container>
     </div>
 </template>
 
 <script>
-    import gamesView from './views/games-view'
-    import gamesDetailsView from './views/game-details-view'
+import { PLAYERS_FETCH, GAMES_FETCH } from "./store/actions";
+import AttendanceContainer from "./constainers/attendance-container";
 
-    export default {
-        name: 'hybrid-app',
-        components: {
-            gamesView,
-            gamesDetailsView
-        }
+export default {
+    components: {
+        AttendanceContainer
+    },
+    beforeCreate: function() {
+        this.$store.dispatch(PLAYERS_FETCH).then(() => {
+            this.$store.dispatch(GAMES_FETCH);
+        });
     }
+};
 </script>
 
 <style>
-    #app {
-        font-family: 'Avenir', Helvetica, Arial, sans-serif;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        text-align: center;
-        color: #2c3e50;
-        margin-top: 60px;
-    }
+#app {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.center-width {
+    width: 700px;
+    align-items: center;
+    vertical-align: center;
+}
 </style>

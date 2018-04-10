@@ -1,15 +1,14 @@
 <template>
     <div>
-        games view
+
     </div>
 </template>
 
 <script>
-    export default {
-        name: "games-view"
-    }
+export default {
+    name: "register-game"
+};
 </script>
 
 <style scoped>
-
 </style>
