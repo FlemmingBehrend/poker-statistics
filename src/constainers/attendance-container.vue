@@ -1,34 +1,38 @@
 <template>
-    <attendance-chart :chart-labels="labels"></attendance-chart>
+    <attendance-chart :chartData="dataSet"></attendance-chart>
 </template>
 
 <script>
-import AttendanceChart from "../views/attendance-chart";
+    import AttendanceChart from "../views/attendance-chart";
 
-export default {
-    components: {
-        AttendanceChart
+    export default {
+        components: {
+            AttendanceChart
 
-    },
-    computed: {
-        attendance() {
-            const att = [];
-            const playerNames = this.$store.getters.playerNames;
-            playerNames.forEach(name => {
-                att.push(Math.random() * 10);
-            });
-
-            const attendingRate = this.$store.getters.attendingRate(2);
-            console.log('atten', att);
-
-            return att;
         },
-        labels() {
-            return this.$store.getters.playerNames
+        computed: {
+            dataSet() {
+                const labels = [];
+                const data = [];
+                const backgroundColors = [];
+                const attIds = this.$store.getters.attendingRate;
+                for (let attId in attIds) {
+                    labels.push(this.$store.getters.playerName(attId));
+                    data.push(attIds[attId]);
+                    backgroundColors.push(this.globalBackgroundColors[attId]);
+                }
+                return {
+                    labels: labels,
+                    datasets: [
+                        {
+                            backgroundColor: backgroundColors,
+                            data: data
+                        }
+                    ]
+                }
+            },
         }
-    }
-
-};
+    };
 </script>
 
 <style scoped>

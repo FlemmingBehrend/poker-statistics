@@ -9,6 +9,11 @@ import { PLAYERS_FETCH, GAMES_FETCH } from "./store/actions";
 import AttendanceContainer from "./constainers/attendance-container";
 
 export default {
+    data() {
+        return {
+            show: false
+        }
+    },
     components: {
         AttendanceContainer
     },

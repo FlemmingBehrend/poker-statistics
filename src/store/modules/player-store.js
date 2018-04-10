@@ -9,12 +9,9 @@ const getters = {
     players(state) {
         return state.players;
     },
-    playerNames(state) {
-        const expression = "players[*].name.first";
-        const search = jmespath.search(state, expression);
-        console.log('playerNames > jmespath = ', search);
-
-        return search;
+    playerName: state => id => {
+        const expression = "players[?id == `" + id + "`].name.first";
+        return jmespath.search(state, expression);
     }
 };
 
