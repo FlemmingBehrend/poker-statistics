@@ -15,16 +15,21 @@
                 options: {
                     title: {
                         display: true,
-                        text: "Deltagelse"
+                        position: "bottom"
                     },
                     responsive: true,
                 }
             };
         },
         mounted() {
-            this.renderChart(
+            const chart = this.renderChart(
                 this.chartData,
-                {responsive: true, maintainAspectRatio: false});
+                {
+                    cutoutPercentage: 30,
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+             );
         }
     };
 </script>

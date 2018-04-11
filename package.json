@@ -14,8 +14,10 @@
   "dependencies": {
     "bootstrap-vue": "^2.0.0-rc.2",
     "chart.js": "^2.7.2",
+    "google-palette": "^1.1.0",
     "jmespath": "^0.15.0",
     "vue": "^2.5.2",
+    "vue-awesome": "^3.0.0",
     "vue-chartjs": "^3.3.1",
     "vuex": "^3.0.1"
   },

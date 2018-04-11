@@ -9,6 +9,9 @@ const getters = {
     players(state) {
         return state.players;
     },
+    numberOfPlayers(state) {
+        return state.players.length;
+    },
     playerName: state => id => {
         const expression = "players[?id == `" + id + "`].name.first";
         return jmespath.search(state, expression);
