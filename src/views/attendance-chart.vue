@@ -13,23 +13,14 @@
         data() {
             return {
                 options: {
-                    title: {
-                        display: true,
-                        position: "bottom"
-                    },
-                    responsive: true,
-                }
-            };
-        },
-        mounted() {
-            const chart = this.renderChart(
-                this.chartData,
-                {
                     cutoutPercentage: 30,
                     responsive: true,
                     maintainAspectRatio: false
                 }
-             );
+            };
+        },
+        mounted() {
+            this.renderChart(this.chartData, this.options);
         }
     };
 </script>

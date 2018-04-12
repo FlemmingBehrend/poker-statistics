@@ -1,12 +1,22 @@
 <template>
     <div id="app">
-        <attendance-container></attendance-container>
+        <b-container fluid>
+            <b-row>
+                <b-col>
+                    <attendance-container></attendance-container>
+                </b-col>
+                <b-col>
+                    <game-placement-container></game-placement-container>
+                </b-col>
+            </b-row>
+        </b-container>
     </div>
 </template>
 
 <script>
 import { PLAYERS_FETCH, GAMES_FETCH } from "./store/actions";
 import AttendanceContainer from "./constainers/attendance-container";
+import GamePlacementContainer from "./constainers/game-placement-container";
 
 export default {
     data() {
@@ -15,7 +25,8 @@ export default {
         }
     },
     components: {
-        AttendanceContainer
+        AttendanceContainer,
+        GamePlacementContainer
     },
     beforeCreate: function() {
         this.$store.dispatch(PLAYERS_FETCH).then(() => {

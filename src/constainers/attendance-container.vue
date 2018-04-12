@@ -36,8 +36,7 @@
         data() {
             return {
                 fromDate: undefined,
-                toDate: undefined,
-                count: 0
+                toDate: undefined
             }
         },
         components: {
