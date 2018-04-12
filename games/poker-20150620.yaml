@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 20/06/2015
+    Where: Kennet
+    Season: 5
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Thomas
+        - Jesper
+        - Henrik
+        - Mads
+        - Kennet
+        - Lasse
+    Games:
+        Game1:
+            Start: 19.45
+            Winner: Kennet
+            Second: Jesper
+        Game2:
+            Start: 20.20
+            Winner: Thomas
+            Second: Jesper
+        Game3:
+            Start: 21.10
+            Winner: Jesper
+            Second: Kennet
+        Game4:
+            Start: 21.45
+            Winner: Kennet
+            Second: Mads
+        Game5:
+            Start: 22.15
+            Winner: Jesper
+            Second: Henrik
+        Game6:
+            Start: 23.05
+            Winner: Thomas
+            Second: Lasse
+        Game7:
+            Start: 23.55
+            Winner: Jesper
+            Second: Henrik
+        Game8:
+            Start: 00.50
+            Winner: Henrik
+            Second: Jesper
+        Game9:
+            Start: 01.15
+            Winner: Jesper
+            Second: Henrik
+        Game10:
+            Start: 01.25
+            Winner: Jesper
+            Second: Thomas
+    Errors:
+        Thomas: 1
+        Jesper: 4
+        Henrik: 2
+        Mads: 2
+        Kennet: 1
+        Lasse: 0
+    Fines:

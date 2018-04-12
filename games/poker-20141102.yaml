@@ -1,0 +1,65 @@
+Pokeraften:
+    Date: 02/11/2014
+    Where: Mads
+    Season: 5
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Thomas
+        - Lasse
+        - Mads
+        - Kennet
+        - Dennis
+        - Jesper
+        - Flemming
+    Games:
+        Game1:
+            Start: 19.20
+            Winner: Mads
+            Second: Dennis
+        Game2:
+            Start: 19.55
+            Winner: Jesper
+            Second: Dennis
+        Game3:
+            Start: 20.35
+            Winner: Jesper
+            Second: Lasse
+        Game4:
+            Start: 21.15
+            Winner: Lasse
+            Second: Thomas
+        Game5:
+            Start: 22.05
+            Winner: Kennet
+            Second: Flemming
+        Game6:
+            Start: 22.25
+            Winner: Flemming
+            Second: Kennet
+        Game7:
+            Start: 22.55
+            Winner: Lasse
+            Second: Flemming
+        Game8:
+            Start: 23.30
+            Winner: Thomas
+            Second: Kennet
+        Game9:
+            Start: 00.10
+            Winner: Dennis
+            Second: Flemming
+        Game10:
+            Start: 00.50
+            Winner: Mads
+            Second: Kennet
+    Errors:
+        Thomas: 7
+        Lasse: 2
+        Mads: 4
+        Kennet: 1
+        Dennis: 3
+        Jesper: 4
+        Flemming: 1
+    Fines:

@@ -1,0 +1,65 @@
+Pokeraften:
+    Date: 11/06/2011
+    Where: Thomas
+    Season: 3
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Mads
+        - Henrik
+        - Dennis
+        - Lasse
+        - Jesper
+        - Morten
+        - Thomas
+    Games:
+        Game1:
+            Start: 19.20
+            Winner: Mads
+            Second: Thomas
+        Game2:
+            Start: 19.55
+            Winner: Mads
+            Second: Henrik
+        Game3:
+            Start: 20.50
+            Winner: Henrik
+            Second: Mads
+        Game4:
+            Start: 21.35
+            Winner: Henrik
+            Second: Dennis
+        Game5:
+            Start: 22.20
+            Winner: Lasse
+            Second: Jesper
+        Game6:
+            Start: 23.35
+            Winner: Thomas
+            Second: Lasse
+        Game7:
+            Start: 00.25
+            Winner: Lasse
+            Second: Thomas
+        Game8:
+            Start: 01.05
+            Winner: Mads
+            Second: Lasse
+        Game9:
+            Start: 01.35
+            Winner: Dennis
+            Second: Morten
+        Game10:
+            Start: 02.15
+            Winner: Jesper
+            Second: Thomas
+    Errors:
+        Mads: 7
+        Henrik: 2
+        Dennis: 1
+        Lasse: 3
+        Jesper: 3
+        Morten: 0
+        Thomas: 2
+    Fines:

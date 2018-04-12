@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 03/09/2016
+    Where: Dennis
+    Season: 6
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Mads
+        - Lasse
+        - Dennis
+        - Kennet
+        - Thomas
+        - Henrik
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Lasse
+            Second: Dennis
+        Game2:
+            Start: 20.30
+            Winner: Kennet
+            Second: Mads
+        Game3:
+            Start: 21.10
+            Winner: Mads
+            Second: Kennet
+        Game4:
+            Start: 21.30
+            Winner: Lasse
+            Second: Mads
+        Game5:
+            Start: 22.00
+            Winner: Kennet
+            Second: Dennis
+        Game6:
+            Start: 23.40
+            Winner: Dennis
+            Second: Thomas
+        Game7:
+            Start: 00.00
+            Winner: Lasse
+            Second: Thomas
+        Game8:
+            Start: 00.30
+            Winner: Mads
+            Second: Kennet
+        Game9:
+            Start: 01.25
+            Winner: Dennis
+            Second: Kennet
+        Game10:
+            Start: 02.13
+            Winner: Kennet
+            Second: Dennis
+    Errors:
+        Mads: 1
+        Lasse: 0
+        Dennis: 5
+        Kennet: 3
+        Thomas: 4
+        Henrik: 2
+    Fines:

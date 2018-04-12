@@ -1,0 +1,61 @@
+Pokeraften:
+    Date: 08/01/2011
+    Where: Kennet
+    Season: 3
+    NumberOfPlayers: 5
+    FirstPrize: 95
+    SecondPrize: 30
+    Attending:
+        - Kennet
+        - Flemming
+        - Jesper
+        - Dennis
+        - Lasse
+    Games:
+        Game1:
+            Start: 19.49
+            Winner: Kennet
+            Second: Flemming
+        Game2:
+            Start: 20.22
+            Winner: Jesper
+            Second: Flemming
+        Game3:
+            Start: 20.57
+            Winner: Kennet
+            Second: Jesper
+        Game4:
+            Start: 21.37
+            Winner: Jesper
+            Second: Dennis
+        Game5:
+            Start: 22.15
+            Winner: Lasse
+            Second: Kennet
+        Game6:
+            Start: 22.32
+            Winner: Kennet
+            Second: Dennis
+        Game7:
+            Start: 23.22
+            Winner: Kennet
+            Second: Flemming
+        Game8:
+            Start: 23.45
+            Winner: Dennis
+            Second: Jesper
+        Game9:
+            Start: 00.25
+            Winner: Kennet
+            Second: Lasse
+        Game10:
+            Start: 00.49
+            Winner: Kennet
+            Second: Jesper
+    Errors:
+        Flemming: 5
+        Dennis: 3
+        Lasse: 1
+        Jesper: 5
+        Kennet: 0
+    Fines:

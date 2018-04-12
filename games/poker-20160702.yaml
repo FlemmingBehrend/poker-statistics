@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 02/07/2016
+    Where: Henrik
+    Season: 6
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Thomas
+        - Jesper
+        - Mads
+        - Kennet
+        - Flemming
+        - Henrik
+    Games:
+        Game1:
+            Start: 19.55
+            Winner: Thomas
+            Second: Jesper
+        Game2:
+            Start: 20.22
+            Winner: Mads
+            Second: Kennet
+        Game3:
+            Start: 20.45
+            Winner: Mads
+            Second: Thomas
+        Game4:
+            Start: 21.00
+            Winner: Kennet
+            Second: Henrik
+        Game5:
+            Start: 21.45
+            Winner: Mads
+            Second: Jesper
+        Game6:
+            Start: 22.40
+            Winner: Kennet
+            Second: Henrik
+        Game7:
+            Start: 22.46
+            Winner: Kennet
+            Second: Henrik
+        Game8:
+            Start: 23.30
+            Winner: Henrik
+            Second: Kennet
+        Game9:
+            Start: 00.05
+            Winner: Flemming
+            Second: Kennet
+        Game10:
+            Start: 00.55
+            Winner: Flemming
+            Second: Jesper
+    Errors:
+        Thomas: 2
+        Jesper: 2
+        Mads: 1
+        Kennet: 0
+        Flemming: 1
+        Henrik: 1
+    Fines:

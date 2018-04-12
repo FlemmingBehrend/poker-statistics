@@ -1,0 +1,69 @@
+Pokeraften:
+    Date: 18/04/2015
+    Where: Morten
+    Season: 5
+    NumberOfPlayers: 9
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Thomas
+        - Jesper
+        - Henrik
+        - Mads
+        - Kennet
+        - Lasse
+        - Flemming
+        - Morten
+        - Dennis
+    Games:
+        Game1:
+            Start: 19.45
+            Winner: Thomas
+            Second: Mads
+        Game2:
+            Start: 20.45
+            Winner: Lasse
+            Second: Jesper
+        Game3:
+            Start: 21.20
+            Winner: Dennis
+            Second: Lasse
+        Game4:
+            Start: 21.30
+            Winner: Dennis
+            Second: Mads
+        Game5:
+            Start: 22.00
+            Winner: Dennis
+            Second: Morten
+        Game6:
+            Start: 22.20
+            Winner: Jesper
+            Second: Dennis
+        Game7:
+            Start: 22.55
+            Winner: Flemming
+            Second: Morten
+        Game8:
+            Start: 23.30
+            Winner: Henrik
+            Second: Jesper
+        Game9:
+            Start: 23.55
+            Winner: Dennis
+            Second: Flemming
+        Game10:
+            Start: 00.10
+            Winner: Jesper
+            Second: Thomas
+    Errors:
+        Thomas: 2
+        Jesper: 8
+        Henrik: 1
+        Mads: 2
+        Kennet: 0
+        Lasse: 1
+        Flemming: 6
+        Morten: 6
+        Dennis: 0
+    Fines:

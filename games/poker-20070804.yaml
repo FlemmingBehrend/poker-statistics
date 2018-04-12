@@ -1,0 +1,69 @@
+Pokeraften:
+    Date: 04/08/2007
+    Where: Lasse
+    Season: 2
+    NumberOfPlayers: 9
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Morten
+        - Lasse
+        - Jesper
+        - Kennet
+        - Flemming
+        - Thomas
+        - Mads
+        - Dennis
+        - Henrik
+    Games:
+        Game1:
+            Start: 20.15
+            Winner: Morten
+            Second: Lasse
+        Game2:
+            Start: 21.30
+            Winner: Jesper
+            Second: Kennet
+        Game3:
+            Start: 22.55
+            Winner: Lasse
+            Second: Flemming
+        Game4:
+            Start: 23.15
+            Winner: Flemming
+            Second: Kennet
+        Game5:
+            Start: 23.50
+            Winner: Morten
+            Second: Thomas
+        Game6:
+            Start: 00.35
+            Winner: Flemming
+            Second: Jesper
+        Game7:
+            Start: 01.20
+            Winner: Thomas
+            Second: Mads
+        Game8:
+            Start: 02.15
+            Winner: Morten
+            Second: Flemming
+        Game9:
+            Start: 02.55
+            Winner: Jesper
+            Second: Flemming
+        Game10:
+            Start: 03.30
+            Winner: Morten
+            Second: Dennis
+    Errors:
+        Henrik: 0
+        Morten: 0
+        Lasse: 0
+        Kennet: 0
+        Dennis: 0
+        Jesper: 0
+        Thomas: 0
+        Flemming: 0
+        Mads: 0
+    Fines:

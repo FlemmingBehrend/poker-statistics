@@ -1,0 +1,67 @@
+Pokeraften:
+    Date: 09/12/2009
+    Where: Jesper
+    Season: 3
+    NumberOfPlayers: 8
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Henrik
+        - Flemming
+        - Mads
+        - Thomas
+        - Kennet
+        - Jesper
+        - Morten
+        - Dennis
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Mads
+            Second: Henrik
+        Game2:
+            Start: 20.50
+            Winner: Flemming
+            Second: Morten
+        Game3:
+            Start: 22.00
+            Winner: Mads
+            Second: Dennis
+        Game4:
+            Start: 23.30
+            Winner: Kennet
+            Second: Thomas
+        Game5:
+            Start: 00.20
+            Winner: Kennet
+            Second: Thomas
+        Game6:
+            Start: 01.40
+            Winner: Morten
+            Second: Thomas
+        Game7:
+            Start: 02.20
+            Winner: Morten
+            Second: Kennet
+        Game8:
+            Start: 03.05
+            Winner: Kennet
+            Second: Jesper
+        Game9:
+            Start: 03.45
+            Winner: Mads
+            Second: Morten
+        Game10:
+            Start: 04.00
+            Winner: Jesper
+            Second: Morten
+    Errors:
+        Henrik: 0
+        Flemming: 0
+        Mads: 0
+        Thomas: 0
+        Kennet: 0
+        Jesper: 0
+        Morten: 0
+        Dennis: 0
+    Fines:

@@ -1,0 +1,65 @@
+Pokeraften:
+    Date: 20/11/2010
+    Where: Lasse
+    Season: 3
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Lasse
+        - Flemming
+        - Jesper
+        - Dennis
+        - Thomas
+        - Henrik
+        - Morten
+    Games:
+        Game1:
+            Start: 19.40
+            Winner: Henrik
+            Second: Morten
+        Game2:
+            Start: 20.05
+            Winner: Thomas
+            Second: Jesper
+        Game3:
+            Start: 20.50
+            Winner: Flemming
+            Second: Morten
+        Game4:
+            Start: 22.10
+            Winner: Henrik
+            Second: Dennis
+        Game5:
+            Start: 22.50
+            Winner: Lasse
+            Second: Henrik
+        Game6:
+            Start: 00.00
+            Winner: Dennis
+            Second: Jesper
+        Game7:
+            Start: 00.45
+            Winner: Dennis
+            Second: Henrik
+        Game8:
+            Start: 01.20
+            Winner: Dennis
+            Second: Henrik
+        Game9:
+            Start: 01.40
+            Winner: Lasse
+            Second: Dennis
+        Game10:
+            Start: 02.20
+            Winner: Henrik
+            Second: Jesper
+    Errors:
+        Lasse: 3
+        Flemming: 3
+        Jesper: 5
+        Dennis: 1
+        Thomas: 3
+        Henrik: 2
+        Morten: 2
+    Fines:

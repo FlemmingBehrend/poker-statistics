@@ -1,0 +1,61 @@
+Pokeraften:
+    Date: 27/09/2014
+    Where: Dennis
+    Season: 5
+    NumberOfPlayers: 5
+    FirstPrize: 100
+    SecondPrize: 25
+    Attending:
+        - Thomas
+        - Mads
+        - Dennis
+        - Flemming
+        - Morten
+    Games:
+        Game1:
+            Start: 19.10
+            Winner: Dennis
+            Second: Thomas
+        Game2:
+            Start: 20.05
+            Winner: Flemming
+            Second: Dennis
+        Game3:
+            Start: 20.55
+            Winner: Flemming
+            Second: Dennis
+        Game4:
+            Start: 21.45
+            Winner: Thomas
+            Second: Dennis
+        Game5:
+            Start: 22.55
+            Winner: Morten
+            Second: Dennis
+        Game6:
+            Start: 23.30
+            Winner: Flemming
+            Second: Morten
+        Game7:
+            Start: 23.50
+            Winner: Mads
+            Second: Dennis
+        Game8:
+            Start: 01.55
+            Winner: Dennis
+            Second: Thomas
+        Game9:
+            Start: 02.50
+            Winner: Morten
+            Second: Mads
+        Game10:
+            Start: 03.25
+            Winner: Dennis
+            Second: Thomas
+    Errors:
+        Thomas: 4
+        Mads: 4
+        Dennis: 2
+        Morten: 4
+        Flemming: 1
+    Fines:

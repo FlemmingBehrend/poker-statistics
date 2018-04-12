@@ -1,0 +1,65 @@
+Pokeraften:
+    Date: 03/03/2012
+    Where: Dennis
+    Season: 4
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Flemming
+        - Mads
+        - Henrik
+        - Dennis
+        - Thomas
+        - Lasse
+        - Morten
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Flemming
+            Second: Mads
+        Game2:
+            Start: 21.20
+            Winner: Henrik
+            Second: Dennis
+        Game3:
+            Start: 22.00
+            Winner: Thomas
+            Second: Lasse
+        Game4:
+            Start: 23.00
+            Winner: Flemming
+            Second: Lasse
+        Game5:
+            Start: 23.25
+            Winner: Dennis
+            Second: Flemming
+        Game6:
+            Start: 00.05
+            Winner: Thomas
+            Second: Dennis
+        Game7:
+            Start: 02.30
+            Winner: Morten
+            Second: Mads
+        Game8:
+            Start: 03.10
+            Winner: Morten
+            Second: Thomas
+        Game9:
+            Start: 03.25
+            Winner: Morten
+            Second: Dennis
+        Game10:
+            Start: 03.40
+            Winner: Thomas
+            Second: Morten
+    Errors:
+        Flemming: 7
+        Mads: 4
+        Henrik: 2
+        Dennis: 6
+        Thomas: 1
+        Lasse: 4
+        Morten: 6
+    Fines:

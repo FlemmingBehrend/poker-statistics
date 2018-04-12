@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 01/06/2013
+    Where: Flemming
+    Season: 4
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Morten
+        - Dennis
+        - Thomas
+        - Mads
+        - Flemming
+        - Jesper
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Flemming
+            Second: Morten
+        Game2:
+            Start: 20.40
+            Winner: Thomas
+            Second: Dennis
+        Game3:
+            Start: 21.40
+            Winner: Thomas
+            Second: Mads
+        Game4:
+            Start: 22.05
+            Winner: Thomas
+            Second: Flemming
+        Game5:
+            Start: 23.00
+            Winner: Mads
+            Second: Thomas
+        Game6:
+            Start: 00.15
+            Winner: Jesper
+            Second: Thomas
+        Game7:
+            Start: 00.50
+            Winner: Jesper
+            Second: Flemming
+        Game8:
+            Start: 01.10
+            Winner: Morten
+            Second: Dennis
+        Game9:
+            Start: 02.05
+            Winner: Jesper
+            Second: Flemming
+        Game10:
+            Start: 02.40
+            Winner: Dennis
+            Second: Mads
+    Errors:
+        Morten: 3
+        Dennis: 1
+        Thomas: 4
+        Mads: 1
+        Flemming: 4
+        Jesper: 6
+    Fines:

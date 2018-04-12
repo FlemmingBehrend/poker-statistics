@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 28/04/2017
+    Where: Lasse
+    Season: 6
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Lasse
+        - Thomas
+        - Kennet
+        - Flemming
+        - Mads
+        - Jesper
+    Games:
+        Game1:
+            Start: 19.45
+            Winner: Thomas
+            Second: Jesper
+        Game2:
+            Start: 20.40
+            Winner: Thomas
+            Second: Kennet
+        Game3:
+            Start: 21.00
+            Winner: Flemming
+            Second: Kennet
+        Game4:
+            Start: 21.50
+            Winner: Mads
+            Second: Flemming
+        Game5:
+            Start: 22.20
+            Winner: Jesper
+            Second: Thomas
+        Game6:
+            Start: 23.15
+            Winner: Mads
+            Second: Flemming
+        Game7:
+            Start: 00.10
+            Winner: Mads
+            Second: Thomas
+        Game8:
+            Start: 00.50
+            Winner: Mads
+            Second: Flemming
+        Game9:
+            Start: 02.00
+            Winner: Lasse
+            Second: Mads
+        Game10:
+            Start: 02.30
+            Winner: Flemming
+            Second: Jesper
+    Errors:
+        Lasse: 1
+        Thomas: 0
+        Kennet: 0
+        Flemming: 1
+        Mads: 2
+        Jesper: 5
+    Fines:

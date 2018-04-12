@@ -1,0 +1,49 @@
+Pokeraften:
+    Date: 08/11/2008
+    Where: Morten
+    Season: 2
+    NumberOfPlayers: 9
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Henrik
+        - Thomas
+        - Flemming
+        - Mads
+        - Kennet
+        - Morten
+        - Dennis
+        - Jesper
+        - Lasse
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Flemming
+            Second: Jesper
+        Game2:
+            Start: 21.55
+            Winner: Kennet
+            Second: Dennis
+        Game3:
+            Start: 23.05
+            Winner: Kennet
+            Second: Mads
+        Game4:
+            Start: 01.00
+            Winner: Jesper
+            Second: Mads
+        Game5:
+            Start: 02.15
+            Winner: Thomas
+            Second: Dennis
+    Errors:
+        Henrik: 0
+        Thomas: 0
+        Flemming: 0
+        Mads: 0
+        Kennet: 0
+        Morten: 0
+        Dennis: 0
+        Jesper: 0
+        Lasse: 0
+    Fines:

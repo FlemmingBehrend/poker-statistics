@@ -1,0 +1,67 @@
+Pokeraften:
+    Date: 05/11/2011
+    Where: Jesper
+    Season: 4
+    NumberOfPlayers: 8
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Flemming
+        - Mads
+        - Henrik
+        - Dennis
+        - Lasse
+        - Jesper
+        - Morten
+        - Kennet
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Mads
+            Second: Dennis
+        Game2:
+            Start: 21.10
+            Winner: Mads
+            Second: Kennet
+        Game3:
+            Start: 21.40
+            Winner: Dennis
+            Second: Flemming
+        Game4:
+            Start: 22.15
+            Winner: Henrik
+            Second: Morten
+        Game5:
+            Start: 23.05
+            Winner: Dennis
+            Second: Flemming
+        Game6:
+            Start: 23.55
+            Winner: Henrik
+            Second: Jesper
+        Game7:
+            Start: 00.55
+            Winner: Dennis
+            Second: Mads
+        Game8:
+            Start: 01.55
+            Winner: Kennet
+            Second: Flemming
+        Game9:
+            Start: 02.00
+            Winner: Dennis
+            Second: Kennet
+        Game10:
+            Start: 02.20
+            Winner: Dennis
+            Second: Kennet
+    Errors:
+        Flemming: 0
+        Mads: 3
+        Henrik: 2
+        Dennis: 1
+        Lasse: 2
+        Jesper: 2
+        Morten: 5
+        Kennet: 1
+    Fines:

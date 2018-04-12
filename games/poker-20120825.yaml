@@ -1,0 +1,66 @@
+Pokeraften:
+    Date: 25/08/2012
+    Where: Dennis
+    Season: 4
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Henrik
+        - Flemming
+        - Jesper
+        - Dennis
+        - Mads
+        - Thomas
+        - Kennet
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Mads
+            Second: Henrik
+        Game2:
+            Start: 21.10
+            Winner: Thomas
+            Second: Henrik
+        Game3:
+            Start: 22.10
+            Winner: Henrik
+            Second: Jesper
+        Game4:
+            Start: 22.50
+            Winner: Mads
+            Second: Henrik
+        Game5:
+            Start: 23.30
+            Winner: Henrik
+            Second: Kennet
+        Game6:
+            Start: 00.50
+            Winner: Henrik
+            Second: Flemming
+        Game7:
+            Start: 01.45
+            Winner: Dennis
+            Second: Kennet
+        Game8:
+            Start: 02.15
+            Winner: Mads
+            Second: Flemming
+        Game9:
+            Start: 03.15
+            Winner: Dennis
+            Second: Flemming
+        Game10:
+            Start: 03.25
+            Winner: Dennis
+            Second: Flemming
+    Errors:
+        Henrik: 4
+        Flemming: 5
+        Thomas: 2
+        Jesper: 7
+        Dennis: 1
+        Mads: 4
+        Kennet: 0
+    Fines:
+        Kennet: 50

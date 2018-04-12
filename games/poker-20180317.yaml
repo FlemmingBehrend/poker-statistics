@@ -1,0 +1,66 @@
+Pokeraften:
+    Date: 17/03/2018
+    Where: Flemming
+    Season: 6
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Henrik
+        - Thomas
+        - Kennet
+        - Flemming
+        - Dennis
+        - Morten
+        - Jesper
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Flemming
+            Second: Kennet
+        Game2:
+            Start: 21.05
+            Winner: Kennet
+            Second: Morten
+        Game3:
+            Start: 21.58
+            Winner: Dennis
+            Second: Morten
+        Game4:
+            Start: 23.15
+            Winner: Kennet
+            Second: Henrik
+        Game5:
+            Start: 00.45
+            Winner: Dennis
+            Second: Morten
+        Game6:
+            Start: 01.30
+            Winner: Dennis
+            Second: Flemming
+        Game7:
+            Start: 02.28
+            Winner: Dennis
+            Second: Flemming
+        Game8:
+            Start: 03.45
+            Winner: Morten
+            Second: Henrik
+        Game9:
+            Start: 04.00
+            Winner: Thomas
+            Second: Dennis
+        Game10:
+            Start: 05.31
+            Winner: Dennis
+            Second: Thomas
+    Errors:
+        Dennis: 3
+        Jesper: 5
+        Morten: 6
+        Kennet: 1
+        Thomas: 4
+        Flemming: 2
+        Henrik: 4
+    Fines:
+        Morten: 100
