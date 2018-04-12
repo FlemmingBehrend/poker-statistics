@@ -1,33 +1,26 @@
 <template>
     <div class="box">
         <div class="header">
-            Deltagelse i pokeraftener
+            Deltagelse i pokeraftener ({{pokernights}})
         </div>
         <div>
             <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
         </div>
         <b-container class="dates">
             <b-row>
-                <b-col sm="9">
-                    <b-row>
-                        <b-col>
-                            <label>Fra:</label>
-                        </b-col>
-                        <b-col>
-                            <b-form-input type="date" v-model="fromDate"></b-form-input>
-                        </b-col>
-                    </b-row>
-                    <b-row>
-                        <b-col>
-                            <label>Til:</label>
-                        </b-col>
-                        <b-col>
-                            <b-form-input type="date" v-model="toDate"></b-form-input>
-                        </b-col>
-                    </b-row>
+                <b-col sm="1">
+                    <label>Fra:</label>
                 </b-col>
                 <b-col>
-                    <b-button variant="primary" class="refresh" v-on:click="updateChart"><icon name="sync" scale="2"></icon></b-button>
+                    <b-form-input type="date" v-model="fromDate"></b-form-input>
+                </b-col>
+            </b-row>
+            <b-row>
+                <b-col sm="1">
+                    <label>Til:</label>
+                </b-col>
+                <b-col>
+                    <b-form-input type="date" v-model="toDate"></b-form-input>
                 </b-col>
             </b-row>
         </b-container>
@@ -42,24 +35,22 @@
     export default {
         data() {
             return {
-                fromDate: "",
-                toDate: ""
+                fromDate: undefined,
+                toDate: undefined,
+                count: 0
             }
         },
         components: {
             AttendanceChart
         },
-        methods: {
-            updateChart: () => {
-                console.log('update');
-
-            }
-        },
         computed: {
+            pokernights() {
+                return this.$store.getters.countPokernights(this.$data.fromDate, this.$data.toDate);
+            },
             dataSet() {
                 const labels = [];
                 const data = [];
-                const attIds = this.$store.getters.attendingRate;
+                const attIds = this.$store.getters.attendingRate(this.$data.fromDate, this.$data.toDate);
                 const attArr = {Content: []};
                 const backgroundColors = palette('cb-Greens', this.$store.getters.numberOfPlayers).map(v => "#"+ v).reverse();
                 for (let attId in attIds) {

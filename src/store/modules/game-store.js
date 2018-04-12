@@ -1,14 +1,33 @@
 import {GAMES_FETCH} from "../actions";
 import jmespath from "jmespath";
 
+function convertDate(str) {
+    const [year, month, day] = str.split("-");
+    return new Date(`${year}-${month}-${day}`);
+}
+
+function filterByDate(games, from, to) {
+    const fromDate = convertDate(from);
+    const toDate = convertDate(to);
+    return games.filter(game => {
+        const date = new Date(game.Info.Date);
+        if (fromDate.getTime() <= date.getTime() && toDate.getTime() >= date.getTime()) {
+            return game;
+        }
+    });
+}
+
 const state = {
     games: []
 };
 
 const getters = {
-    attendingRate() {
-        const expression = "games[*].AttendingPlayerIds[]";
-        const search = jmespath.search(state, expression);
+    countPokernights: state => (from = "2000-01-01", to = "2050-01-01") => {
+        return filterByDate(state.games, from, to).length;
+    },
+    attendingRate: state => (from = "2000-01-01", to = "2050-01-01") => {
+        const expression = "[*].AttendingPlayerIds[]";
+        const search = jmespath.search(filterByDate(state.games, from, to), expression);
         return search.reduce((acc, cur) => {
             if (typeof acc[cur] === "undefined") {
                 acc[cur] = 1;

@@ -20,7 +20,8 @@ fs.readdir('games', function(err, items) {
         gameState.Season = pokeraften.Season;
         gameState.Info = {};
         gameState.Info.LocationPlayerId = mapPlayerToId(pokeraften.Where);
-        gameState.Info.Date = pokeraften.Date;
+        const [day, month, year] = pokeraften.Date.split("/");
+        gameState.Info.Date = new Date(`${year}-${month}-${day}`);
         gameState.Info.FirstPrize = pokeraften.FirstPrize;
         gameState.Info.SecondPrize = pokeraften.SecondPrize;
         gameState.AttendingPlayerIds = [];
