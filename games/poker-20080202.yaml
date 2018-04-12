@@ -1,0 +1,69 @@
+Pokeraften:
+    Date: 02/02/2008
+    Where: Henrik
+    Season: 2
+    NumberOfPlayers: 9
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Henrik
+        - Morten
+        - Lasse
+        - Kennet
+        - Dennis
+        - Jesper
+        - Thomas
+        - Flemming
+        - Mads
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Henrik
+            Second: Morten
+        Game2:
+            Start: 21.20
+            Winner: Morten
+            Second: Lasse
+        Game3:
+            Start: 22.20
+            Winner: Kennet
+            Second: Dennis
+        Game4:
+            Start: 23.00
+            Winner: Lasse
+            Second: Morten
+        Game5:
+            Start: 23.35
+            Winner: Henrik
+            Second: Jesper
+        Game6:
+            Start: 00.45
+            Winner: Morten
+            Second: Jesper
+        Game7:
+            Start: 01.55
+            Winner: Jesper
+            Second: Thomas
+        Game8:
+            Start: 02.40
+            Winner: Kennet
+            Second: Dennis
+        Game9:
+            Start: 04.00
+            Winner: Dennis
+            Second: Kennet
+        Game10:
+            Start: 04.30
+            Winner: Mads
+            Second: Kennet
+    Errors:
+        Henrik: 0
+        Morten: 0
+        Lasse: 0
+        Kennet: 0
+        Dennis: 0
+        Jesper: 0
+        Thomas: 0
+        Flemming: 0
+        Mads: 0
+    Fines:

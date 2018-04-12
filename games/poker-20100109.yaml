@@ -1,0 +1,67 @@
+Pokeraften:
+    Date: 09/01/2010
+    Where: Henrik
+    Season: 3
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Thomas
+        - Henrik
+        - Flemming
+        - Kennet
+        - Mads
+        - Dennis
+        - Jesper
+    Games:
+        Game1:
+            Start: 19.50
+            Winner: Flemming
+            Second: Henrik
+        Game2:
+            Start: 20.50
+            Winner: Thomas
+            Second: Henrik
+        Game3:
+            Start: 21.50
+            Winner: Thomas
+            Second: Jesper
+        Game4:
+            Start: 22.40
+            Winner: Henrik
+            Second: Flemming
+        Game5:
+            Start: 00.00
+            Winner: Flemming
+            Second: Kennet
+        Game6:
+            Start: 02.00
+            Winner: Thomas
+            Second: Kennet
+        Game7:
+            Start: 02.50
+            Winner: Mads
+            Second: Jesper
+        Game8:
+            Start: 03.35
+            Winner: Mads
+            Second: Henrik
+        Game9:
+            Start: 04.50
+            Winner: Henrik
+            Second: Kennet
+        Game10:
+            Start: 05.35
+            Winner: Flemming
+            Second: Jesper
+    Errors:
+        Thomas: 8
+        Henrik: 5
+        Flemming: 7
+        Kennet: 5
+        Mads: 6
+        Dennis: 3
+        Jesper: 10
+    Fines:
+        Mads: 50
+        Kennet: 50

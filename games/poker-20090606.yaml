@@ -1,0 +1,61 @@
+Pokeraften:
+    Date: 06/06/2009
+    Where: Thomas
+    Season: 2
+    NumberOfPlayers: 5
+    FirstPrize: 95
+    SecondPrize: 30
+    Attending:
+        - Kennet
+        - Lasse
+        - Mads
+        - Henrik
+        - Thomas
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Kennet
+            Second: Lasse
+        Game2:
+            Start: 20.45
+            Winner: Kennet
+            Second: Mads
+        Game3:
+            Start: 21.30
+            Winner: Lasse
+            Second: Dennis
+        Game4:
+            Start: 22.40
+            Winner: Lasse
+            Second: Thomas
+        Game5:
+            Start: 23.00
+            Winner: Lasse
+            Second: Thomas
+        Game6:
+            Start: 23.35
+            Winner: Thomas
+            Second: Kennet
+        Game7:
+            Start: 00.25
+            Winner: Henrik
+            Second: Kennet
+        Game8:
+            Start: 02.00
+            Winner: Henrik
+            Second: Kennet
+        Game9:
+            Start: 03.00
+            Winner: Thomas
+            Second: Kennet
+        Game10:
+            Start: 03.40
+            Winner: Kennet
+            Second: Thomas
+    Errors:
+        Kennet: 0
+        Lasse: 0
+        Mads: 0
+        Henrik: 0
+        Thomas: 0
+    Fines:

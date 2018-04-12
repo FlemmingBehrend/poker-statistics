@@ -1,0 +1,67 @@
+Pokeraften:
+    Date: 10/09/2010
+    Where: Morten
+    Season: 3
+    NumberOfPlayers: 8
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Thomas
+        - Henrik
+        - Lasse
+        - Morten
+        - Kennet
+        - Mads
+        - Dennis
+        - Jesper
+    Games:
+        Game1:
+            Start: 20.20
+            Winner: Thomas
+            Second: Henrik
+        Game2:
+            Start: 21.00
+            Winner: Lasse
+            Second: Henrik
+        Game3:
+            Start: 21.35
+            Winner: Morten
+            Second: Lasse
+        Game4:
+            Start: 22.10
+            Winner: Morten
+            Second: Kennet
+        Game5:
+            Start: 22.45
+            Winner: Lasse
+            Second: Mads
+        Game6:
+            Start: 23.50
+            Winner: Dennis
+            Second: Henrik
+        Game7:
+            Start: 00.20
+            Winner: Mads
+            Second: Jesper
+        Game8:
+            Start: 01.30
+            Winner: Mads
+            Second: Thomas
+        Game9:
+            Start: 02.30
+            Winner: Morten
+            Second: Dennis
+        Game10:
+            Start: 03.10
+            Winner: Morten
+            Second: Thomas
+    Errors:
+        Thomas: 1
+        Henrik: 2
+        Lasse: 0
+        Morten: 4
+        Kennet: 0
+        Mads: 4
+        Dennis: 0
+        Jesper: 5
+    Fines:

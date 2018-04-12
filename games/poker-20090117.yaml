@@ -1,0 +1,59 @@
+Pokeraften:
+    Date: 17/01/2009
+    Where: Kennet
+    Season: 2
+    NumberOfPlayers: 8
+    FirstPrize: 150
+    SecondPrize: 70
+    Attending:
+        - Henrik
+        - Thomas
+        - Flemming
+        - Mads
+        - Kennet
+        - Morten
+        - Dennis
+        - Jesper
+    Games:
+        Game1:
+            Start: 19.55
+            Winner: Henrik
+            Second: Thomas
+        Game2:
+            Start: 20.15
+            Winner: Henrik
+            Second: Flemming
+        Game3:
+            Start: 21.50
+            Winner: Mads
+            Second: Henrik
+        Game4:
+            Start: 23.05
+            Winner: Kennet
+            Second: Morten
+        Game5:
+            Start: 23.45
+            Winner: Henrik
+            Second: Morten
+        Game6:
+            Start: 00.45
+            Winner: Thomas
+            Second: Flemming
+        Game7:
+            Start: 01.45
+            Winner: Thomas
+            Second: Dennis
+        Game8:
+            Start: 03.10
+            Winner: Dennis
+            Second: Flemming
+    Errors:
+        Henrik: 0
+        Thomas: 0
+        Flemming: 0
+        Mads: 0
+        Kennet: 0
+        Morten: 0
+        Dennis: 0
+        Jesper: 0
+    Fines:

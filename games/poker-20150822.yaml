@@ -1,0 +1,61 @@
+Pokeraften:
+    Date: 22/08/2015
+    Where: Flemming
+    Season: 5
+    NumberOfPlayers: 5
+    FirstPrize: 100
+    SecondPrize: 25
+    Attending:
+        - Thomas
+        - Flemming
+        - Henrik
+        - Mads
+        - Morten
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Flemming
+            Second: Henrik
+        Game2:
+            Start: 20.30
+            Winner: Mads
+            Second: Flemming
+        Game3:
+            Start: 20.50
+            Winner: Mads
+            Second: Morten
+        Game4:
+            Start: 21.55
+            Winner: Morten
+            Second: Henrik
+        Game5:
+            Start: 22.50
+            Winner: Mads
+            Second: Flemming
+        Game6:
+            Start: 23.30
+            Winner: Flemming
+            Second: Thomas
+        Game7:
+            Start: 00.35
+            Winner: Mads
+            Second: Flemming
+        Game8:
+            Start: 01.00
+            Winner: Mads
+            Second: Morten
+        Game9:
+            Start: 02.05
+            Winner: Henrik
+            Second: Morten
+        Game10:
+            Start: 03.05
+            Winner: Mads
+            Second: Morten
+    Errors:
+        Thomas: 2
+        Flemming: 4
+        Henrik: 5
+        Mads: 2
+        Morten: 0
+    Fines:

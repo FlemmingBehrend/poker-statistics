@@ -1,0 +1,61 @@
+Pokeraften:
+    Date: 21/06/2008
+    Where: Mads
+    Season: 2
+    NumberOfPlayers: 9
+    FirstPrize: 95
+    SecondPrize: 30
+    Attending:
+        - Dennis
+        - Mads
+        - Lasse
+        - Thomas
+        - Kennet
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Dennis
+            Second: Mads
+        Game2:
+            Start: 21.30
+            Winner: Lasse
+            Second: Mads
+        Game3:
+            Start: 22.00
+            Winner: Lasse
+            Second: Mads
+        Game4:
+            Start: 22.45
+            Winner: Dennis
+            Second: Thomas
+        Game5:
+            Start: 23.00
+            Winner: Kennet
+            Second: Mads
+        Game6:
+            Start: 00.00
+            Winner: Mads
+            Second: Kennet
+        Game7:
+            Start: 00.55
+            Winner: Kennet
+            Second: Thomas
+        Game8:
+            Start: 01.20
+            Winner: Thomas
+            Second: Kennet
+        Game9:
+            Start: 02.25
+            Winner: Thomas
+            Second: Mads
+        Game10:
+            Start: 03.10
+            Winner: Mads
+            Second: Kennet
+    Errors:
+        Dennis: 0
+        Mads: 0
+        Lasse: 0
+        Thomas: 0
+        Kennet: 0
+    Fines:

@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 22/05/2010
+    Where: Mads
+    Season: 3
+    NumberOfPlayers: 6
+    FirstPrize: 100
+    SecondPrize: 50
+    Attending:
+        - Thomas
+        - Henrik
+        - Lasse
+        - Kennet
+        - Mads
+        - Dennis
+    Games:
+        Game1:
+            Start: 19.50
+            Winner: Lasse
+            Second: Henrik
+        Game2:
+            Start: 21.00
+            Winner: Thomas
+            Second: Lasse
+        Game3:
+            Start: 21.35
+            Winner: Thomas
+            Second: Kennet
+        Game4:
+            Start: 22.55
+            Winner: Lasse
+            Second: Dennis
+        Game5:
+            Start: 23.30
+            Winner: Henrik
+            Second: Thomas
+        Game6:
+            Start: 00.35
+            Winner: Dennis
+            Second: Lasse
+        Game7:
+            Start: 01.10
+            Winner: Mads
+            Second: Dennis
+        Game8:
+            Start: 02.25
+            Winner: Kennet
+            Second: Dennis
+        Game9:
+            Start: 03.50
+            Winner: Thomas
+            Second: Dennis
+        Game10:
+            Start: 04.05
+            Winner: Thomas
+            Second: Mads
+    Errors:
+        Thomas: 3
+        Henrik: 11
+        Lasse: 6
+        Kennet: 0
+        Mads: 4
+        Dennis: 3
+    Fines:

@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 28/01/2012
+    Where: Henrik
+    Season: 4
+    NumberOfPlayers: 6
+    FirstPrize: 115
+    SecondPrize: 35
+    Attending:
+        - Flemming
+        - Mads
+        - Henrik
+        - Dennis
+        - Thomas
+        - Jesper
+    Games:
+        Game1:
+            Start: 19.20
+            Winner: Jesper
+            Second: Henrik
+        Game2:
+            Start: 20.10
+            Winner: Dennis
+            Second: Jesper
+        Game3:
+            Start: 20.55
+            Winner: Jesper
+            Second: Dennis
+        Game4:
+            Start: 21.40
+            Winner: Dennis
+            Second: Flemming
+        Game5:
+            Start: 22.05
+            Winner: Jesper
+            Second: Henrik
+        Game6:
+            Start: 22.50
+            Winner: Flemming
+            Second: Dennis
+        Game7:
+            Start: 23.30
+            Winner: Henrik
+            Second: Thomas
+        Game8:
+            Start: 01.00
+            Winner: Jesper
+            Second: Thomas
+        Game9:
+            Start: 01.30
+            Winner: Dennis
+            Second: Flemming
+        Game10:
+            Start: 02.10
+            Winner: Henrik
+            Second: Mads
+    Errors:
+        Flemming: 2
+        Mads: 2
+        Henrik: 7
+        Dennis: 3
+        Thomas: 0
+        Jesper: 6
+    Fines:

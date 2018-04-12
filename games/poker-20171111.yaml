@@ -1,0 +1,69 @@
+Pokeraften:
+    Date: 11/11/2017
+    Where: Morten
+    Season: 6
+    NumberOfPlayers: 9
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Henrik
+        - Thomas
+        - Kennet
+        - Flemming
+        - Dennis
+        - Morten
+        - Jesper
+        - Mads
+        - Lasse
+    Games:
+        Game1:
+            Start: 19.30
+            Winner: Lasse
+            Second: Mads
+        Game2:
+            Start: 21.00
+            Winner: Morten
+            Second: Jesper
+        Game3:
+            Start: 22.30
+            Winner: Thomas
+            Second: Jesper
+        Game4:
+            Start: 00.00
+            Winner: Mads
+            Second: Henrik
+        Game5:
+            Start: 00.40
+            Winner: Morten
+            Second: Dennis
+        Game6:
+            Start: 02.14
+            Winner: Morten
+            Second: Dennis
+        Game7:
+            Start: 03.00
+            Winner: Thomas
+            Second: Henrik
+        Game8:
+            Start: 03.30
+            Winner: Flemming
+            Second: Thomas
+        Game9:
+            Start: 04.00
+            Winner: Flemming
+            Second: Henrik
+        Game10:
+            Start: 05.00
+            Winner: Jesper
+            Second: Flemming
+    Errors:
+        Dennis: 0
+        Jesper: 2
+        Morten: 0
+        Kennet: 3
+        Thomas: 0
+        Flemming: 1
+        Henrik: 5
+        Lasse: 1
+        Mads: 0
+    Fines:

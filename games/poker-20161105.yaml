@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 05/11/2016
+    Where: Mads
+    Season: 6
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Mads
+        - Flemming
+        - Dennis
+        - Thomas
+        - Henrik
+        - Jesper
+    Games:
+        Game1:
+            Start: 19.04
+            Winner: Flemming
+            Second: Mads
+        Game2:
+            Start: 20.05
+            Winner: Dennis
+            Second: Thomas
+        Game3:
+            Start: 20.40
+            Winner: Thomas
+            Second: Dennis
+        Game4:
+            Start: 21.05
+            Winner: Mads
+            Second: Henrik
+        Game5:
+            Start: 21.35
+            Winner: Jesper
+            Second: Dennis
+        Game6:
+            Start: 22.30
+            Winner: Thomas
+            Second: Flemming
+        Game7:
+            Start: 23.20
+            Winner: Henrik
+            Second: Mads
+        Game8:
+            Start: 00.00
+            Winner: Flemming
+            Second: Thomas
+        Game9:
+            Start: 01.10
+            Winner: Henrik
+            Second: Jesper
+        Game10:
+            Start: 02.00
+            Winner: Dennis
+            Second: Henrik
+    Errors:
+        Mads: 1
+        Flemming: 3
+        Dennis: 2
+        Thomas: 0
+        Henrik: 6
+        Jesper: 1
+    Fines:

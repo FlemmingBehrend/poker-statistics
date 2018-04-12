@@ -1,0 +1,69 @@
+Pokeraften:
+    Date: 28/03/2009
+    Where: Flemming
+    Season: 2
+    NumberOfPlayers: 8
+    FirstPrize: 95
+    SecondPrize: 30
+    Attending:
+        - Jesper
+        - Lasse
+        - Dennis
+        - Thomas
+        - Flemming
+        - Henrik
+        - Morten
+        - Kennet
+        - Mads
+    Games:
+        Game1:
+            Start: 19.30
+            Winner: Jesper
+            Second: Lasse
+        Game2:
+            Start: 20.35
+            Winner: Dennis
+            Second: Thomas
+        Game3:
+            Start: 21.25
+            Winner: Lasse
+            Second: Dennis
+        Game4:
+            Start: 22.10
+            Winner: Lasse
+            Second: Jesper
+        Game5:
+            Start: 23.10
+            Winner: Flemming
+            Second: Henrik
+        Game6:
+            Start: 00.10
+            Winner: Henrik
+            Second: Lasse
+        Game7:
+            Start: 01.45
+            Winner: Jesper
+            Second: Flemming
+        Game8:
+            Start: 02.15
+            Winner: Dennis
+            Second: Jesper
+        Game9:
+            Start: 02.30
+            Winner: Jesper
+            Second: Thomas
+        Game10:
+            Start: 02.40
+            Winner: Thomas
+            Second: Mads
+    Errors:
+        Jesper: 0
+        Lasse: 0
+        Dennis: 0
+        Thomas: 0
+        Flemming: 0
+        Henrik: 0
+        Morten: 0
+        Kennet: 0
+        Mads: 0
+    Fines:

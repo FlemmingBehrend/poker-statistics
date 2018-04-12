@@ -1,0 +1,66 @@
+Pokeraften:
+    Date: 16/01/2016
+    Where: Thomas
+    Season: 5
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Thomas
+        - Jesper
+        - Flemming
+        - Henrik
+        - Dennis
+        - Mads
+        - Kennet
+    Games:
+        Game1:
+            Start: 19.40
+            Winner: Thomas
+            Second: Dennis
+        Game2:
+            Start: 20.40
+            Winner: Henrik
+            Second: Kennet
+        Game3:
+            Start: 21.00
+            Winner: Kennet
+            Second: Jesper
+        Game4:
+            Start: 21.45
+            Winner: Mads
+            Second: Henrik
+        Game5:
+            Start: 22.30
+            Winner: Thomas
+            Second: Flemming
+        Game6:
+            Start: 23.45
+            Winner: Thomas
+            Second: Kennet
+        Game7:
+            Start: 01.10
+            Winner: Mads
+            Second: Henrik
+        Game8:
+            Start: 01.30
+            Winner: Flemming
+            Second: Thomas
+        Game9:
+            Start: 02.20
+            Winner: Dennis
+            Second: Flemming
+        Game10:
+            Start: 02.40
+            Winner: Thomas
+            Second: Henrik
+    Errors:
+        Thomas: 4
+        Jesper: 5
+        Flemming: 7
+        Henrik: 4
+        Dennis: 3
+        Mads: 8
+        Kennet: 3
+    Fines:
+        Thomas: 50

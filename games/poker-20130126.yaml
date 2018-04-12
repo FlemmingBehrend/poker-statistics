@@ -1,0 +1,65 @@
+Pokeraften:
+    Date: 26/01/2013
+    Where: Lasse
+    Season: 4
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Henrik
+        - Lasse
+        - Flemming
+        - Jesper
+        - Dennis
+        - Mads
+        - Thomas
+    Games:
+        Game1:
+            Start: 20.25
+            Winner: Henrik
+            Second: Mads
+        Game2:
+            Start: 21.10
+            Winner: Thomas
+            Second: Jesper
+        Game3:
+            Start: 21.45
+            Winner: Jesper
+            Second: Dennis
+        Game4:
+            Start: 22.30
+            Winner: Flemming
+            Second: Dennis
+        Game5:
+            Start: 23.00
+            Winner: Lasse
+            Second: Mads
+        Game6:
+            Start: 23.40
+            Winner: Mads
+            Second: Lasse
+        Game7:
+            Start: 01.25
+            Winner: Thomas
+            Second: Flemming
+        Game8:
+            Start: 01.50
+            Winner: Dennis
+            Second: Thomas
+        Game9:
+            Start: 02.25
+            Winner: Henrik
+            Second: Lasse
+        Game10:
+            Start: 02.50
+            Winner: Jesper
+            Second: Thomas
+    Errors:
+        Henrik: 3
+        Lasse: 2
+        Flemming: 1
+        Thomas: 3
+        Jesper: 6
+        Dennis: 2
+        Mads: 3
+    Fines:

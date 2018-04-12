@@ -1,0 +1,65 @@
+Pokeraften:
+    Date: 13/04/2013
+    Where: Kennet
+    Season: 4
+    NumberOfPlayers: 7
+    FirstPrize: 135
+    SecondPrize: 40
+    Attending:
+        - Henrik
+        - Lasse
+        - Flemming
+        - Kennet
+        - Jesper
+        - Dennis
+        - Mads
+    Games:
+        Game1:
+            Start: 19.30
+            Winner: Henrik
+            Second: Lasse
+        Game2:
+            Start: 20.05
+            Winner: Flemming
+            Second: Kennet
+        Game3:
+            Start: 20.55
+            Winner: Lasse
+            Second: Jesper
+        Game4:
+            Start: 21.45
+            Winner: Kennet
+            Second: Henrik
+        Game5:
+            Start: 23.10
+            Winner: Flemming
+            Second: Henrik
+        Game6:
+            Start: 00.20
+            Winner: Dennis
+            Second: Kennet
+        Game7:
+            Start: 01.15
+            Winner: Mads
+            Second: Kennet
+        Game8:
+            Start: 01.45
+            Winner: Flemming
+            Second: Henrik
+        Game9:
+            Start: 02.10
+            Winner: Kennet
+            Second: Mads
+        Game10:
+            Start: 02.30
+            Winner: Jesper
+            Second: Dennis
+    Errors:
+        Henrik: 2
+        Lasse: 1
+        Flemming: 5
+        Kennet: 0
+        Jesper: 1
+        Dennis: 0
+        Mads: 5
+    Fines:

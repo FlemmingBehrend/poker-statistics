@@ -1,0 +1,69 @@
+Pokeraften:
+    Date: 08/12/2012
+    Where: Morten
+    Season: 4
+    NumberOfPlayers: 9
+    FirstPrize: 150
+    SecondPrize: 50
+    Attending:
+        - Henrik
+        - Lasse
+        - Flemming
+        - Jesper
+        - Dennis
+        - Mads
+        - Thomas
+        - Morten
+        - Kennet
+    Games:
+        Game1:
+            Start: 19.25
+            Winner: Jesper
+            Second: Dennis
+        Game2:
+            Start: 20.25
+            Winner: Flemming
+            Second: Mads
+        Game3:
+            Start: 21.00
+            Winner: Jesper
+            Second: Morten
+        Game4:
+            Start: 21.30
+            Winner: Kennet
+            Second: Dennis
+        Game5:
+            Start: 22.10
+            Winner: Thomas
+            Second: Jesper
+        Game6:
+            Start: 22.40
+            Winner: Jesper
+            Second: Dennis
+        Game7:
+            Start: 23.35
+            Winner: Jesper
+            Second: Flemming
+        Game8:
+            Start: 01.00
+            Winner: Thomas
+            Second: Jesper
+        Game9:
+            Start: 02.00
+            Winner: Morten
+            Second: Dennis
+        Game10:
+            Start: 02.30
+            Winner: Flemming
+            Second: Thomas
+    Errors:
+        Henrik: 0
+        Lasse: 0
+        Flemming: 1
+        Thomas: 2
+        Jesper: 8
+        Dennis: 1
+        Mads: 6
+        Morten: 7
+        Kennet: 0
+    Fines:

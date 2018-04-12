@@ -1,0 +1,53 @@
+Pokeraften:
+    Date: 20/03/2010
+    Where: Dennis
+    Season: 3
+    NumberOfPlayers: 5
+    FirstPrize: 100
+    SecondPrize: 50
+    Attending:
+        - Mads
+        - Henrik
+        - Kennet
+        - Dennis
+        - Lasse
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Mads
+            Second: Kennet
+        Game2:
+            Start: 21.00
+            Winner: Henrik
+            Second: Kennet
+        Game3:
+            Start: 21.30
+            Winner: Dennis
+            Second: Henrik
+        Game4:
+            Start: 22.00
+            Winner: Henrik
+            Second: Dennis
+        Game5:
+            Start: 22.50
+            Winner: Lasse
+            Second: Dennis
+        Game6:
+            Start: 23.30
+            Winner: Kennet
+            Second: Dennis
+        Game7:
+            Start: 01.10
+            Winner: Lasse
+            Second: Dennis
+        Game8:
+            Start: 02.50
+            Winner: Dennis
+            Second: Kennet
+    Errors:
+        Mads: 1
+        Henrik: 3
+        Kennet: 3
+        Dennis: 6
+        Lasse: 3
+    Fines:

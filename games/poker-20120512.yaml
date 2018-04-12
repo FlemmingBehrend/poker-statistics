@@ -1,0 +1,59 @@
+Pokeraften:
+    Date: 12/05/2012
+    Where: Mads
+    Season: 4
+    NumberOfPlayers: 4
+    FirstPrize: 95
+    SecondPrize: 30
+    Attending:
+        - Henrik
+        - Dennis
+        - Mads
+        - Morten
+    Games:
+        Game1:
+            Start: 20.00
+            Winner: Morten
+            Second: Mads
+        Game2:
+            Start: 20.45
+            Winner: Dennis
+            Second: Morten
+        Game3:
+            Start: 22.10
+            Winner: Dennis
+            Second: Morten
+        Game4:
+            Start: 23.00
+            Winner: Mads
+            Second: Dennis
+        Game5:
+            Start: 23.55
+            Winner: Thomas
+            Second: Morten
+        Game6:
+            Start: 00.50
+            Winner: Thomas
+            Second: Dennis
+        Game7:
+            Start: 01.25
+            Winner: Mads
+            Second: Dennis
+        Game8:
+            Start: 01.50
+            Winner: Morten
+            Second: Henrik
+        Game9:
+            Start: 02.10
+            Winner: Dennis
+            Second: Mads
+        Game10:
+            Start: 02.30
+            Winner: Mads
+            Second: Henrik
+    Errors:
+        Henrik: 3
+        Dennis: 2
+        Mads: 6
+        Morten: 5
+    Fines:

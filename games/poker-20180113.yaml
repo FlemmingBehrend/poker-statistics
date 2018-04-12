@@ -1,0 +1,62 @@
+Pokeraften:
+    Date: 13/01/2018
+    Where: Kennet
+    Season: 6
+    NumberOfPlayers: 5
+    FirstPrize: 100
+    SecondPrize: 25
+    Attending:
+        - Henrik
+        - Thomas
+        - Kennet
+        - Mads
+        - Lasse
+    Games:
+        Game1:
+            Start: 19.30
+            Winner: Mads
+            Second: Henrik
+        Game2:
+            Start: 20.15
+            Winner: Kennet
+            Second: Henrik
+        Game3:
+            Start: 21.10
+            Winner: Henrik
+            Second: Thomas
+        Game4:
+            Start: 22.40
+            Winner: Kennet
+            Second: Thomas
+        Game5:
+            Start: 23.10
+            Winner: Thomas
+            Second: Lasse
+        Game6:
+            Start: 23.50
+            Winner: Kennet
+            Second: Thomas
+        Game7:
+            Start: 00.50
+            Winner: Mads
+            Second: Henrik
+        Game8:
+            Start: 00.50
+            Winner: Mads
+            Second: Henrik
+        Game9:
+            Start: 01.15
+            Winner: Mads
+            Second: Thomas
+        Game10:
+            Start: 01.15
+            Winner: Mads
+            Second: Thomas
+    Errors:
+        Kennet: 0
+        Thomas: 2
+        Henrik: 2
+        Mads: 2
+        Lasse: 0
+    Fines:
+        Kennet: 100

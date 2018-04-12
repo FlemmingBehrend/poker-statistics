@@ -1,0 +1,61 @@
+Pokeraften:
+    Date: 09/04/2016
+    Where: Jesper
+    Season: 6
+    NumberOfPlayers: 5
+    FirstPrize: 100
+    SecondPrize: 25
+    Attending:
+        - Thomas
+        - Jesper
+        - Flemming
+        - Henrik
+        - Dennis
+    Games:
+        Game1:
+            Start: 19.30
+            Winner: Thomas
+            Second: Jesper
+        Game2:
+            Start: 19.47
+            Winner: Jesper
+            Second: Flemming
+        Game3:
+            Start: 20.30
+            Winner: Henrik
+            Second: Jesper
+        Game4:
+            Start: 21.00
+            Winner: Jesper
+            Second: Flemming
+        Game5:
+            Start: 22.00
+            Winner: Thomas
+            Second: Dennis
+        Game6:
+            Start: 22.45
+            Winner: Dennis
+            Second: Jesper
+        Game7:
+            Start: 23.00
+            Winner: Thomas
+            Second: Dennis
+        Game8:
+            Start: 23.25
+            Winner: Flemming
+            Second: Henrik
+        Game9:
+            Start: 00.10
+            Winner: Thomas
+            Second: Flemming
+        Game10:
+            Start: 00.35
+            Winner: Thomas
+            Second: Dennis
+    Errors:
+        Thomas: 0
+        Jesper: 0
+        Flemming: 3
+        Henrik: 0
+        Dennis: 1
+    Fines:

@@ -1,0 +1,67 @@
+Pokeraften:
+    Date: 01/03/2014
+    Where: Henrik
+    Season: 5
+    NumberOfPlayers: 8
+    FirstPrize: 140
+    SecondPrize: 35
+    Attending:
+        - Henrik
+        - Morten
+        - Dennis
+        - Thomas
+        - Jesper
+        - Kennet
+        - Mads
+        - Flemming
+    Games:
+        Game1:
+            Start: 19.35
+            Winner: Henrik
+            Second: Jesper
+        Game2:
+            Start: 20.20
+            Winner: Flemming
+            Second: Kennet
+        Game3:
+            Start: 21.08
+            Winner: Henrik
+            Second: Kennet
+        Game4:
+            Start: 22.35
+            Winner: Henrik
+            Second: Morten
+        Game5:
+            Start: 23.30
+            Winner: Thomas
+            Second: Flemming
+        Game6:
+            Start: 00.52
+            Winner: Flemming
+            Second: Henrik
+        Game7:
+            Start: 01.06
+            Winner: Jesper
+            Second: Henrik
+        Game8:
+            Start: 01.35
+            Winner: Dennis
+            Second: Morten
+        Game9:
+            Start: 02.30
+            Winner: Henrik
+            Second: Jesper
+        Game10:
+            Start: 02.45
+            Winner: Morten
+            Second: Thomas
+    Errors:
+        Henrik: 5
+        Morten: 0
+        Dennis: 2
+        Thomas: 4
+        Jesper: 4
+        Kennet: 0
+        Mads: 0
+        Flemming: 1
+    Fines:

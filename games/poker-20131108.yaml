@@ -1,0 +1,67 @@
+Pokeraften:
+    Date: 08/11/2013
+    Where: Thomas
+    Season: 4
+    NumberOfPlayers: 8
+    FirstPrize: 140
+    SecondPrize: 35
+    Attending:
+        - Henrik
+        - Morten
+        - Dennis
+        - Thomas
+        - Kennet
+        - Mads
+        - Flemming
+        - Lasse
+    Games:
+        Game1:
+            Start: 19.30
+            Winner: Lasse
+            Second: Kennet
+        Game2:
+            Start: 20.45
+            Winner: Dennis
+            Second: Thomas
+        Game3:
+            Start: 22.10
+            Winner: Kennet
+            Second: Dennis
+        Game4:
+            Start: 23.40
+            Winner: Mads
+            Second: Kennet
+        Game5:
+            Start: 00.15
+            Winner: Kennet
+            Second: Flemming
+        Game6:
+            Start: 01.15
+            Winner: Mads
+            Second: Henrik
+        Game7:
+            Start: 01.55
+            Winner: Henrik
+            Second: Flemming
+        Game8:
+            Start: 02.10
+            Winner: Flemming
+            Second: Henrik
+        Game9:
+            Start: 02.40
+            Winner: Dennis
+            Second: Kennet
+        Game10:
+            Start: 02.55
+            Winner: Thomas
+            Second: Dennis
+    Errors:
+        Henrik: 4
+        Morten: 0
+        Dennis: 6
+        Thomas: 4
+        Kennet: 0
+        Mads: 3
+        Flemming: 3
+        Lasse: 0
+    Fines:

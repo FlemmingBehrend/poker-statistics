@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 11/04/2008
+    Where: Dennis
+    Season: 2
+    NumberOfPlayers: 6
+    FirstPrize: 115
+    SecondPrize: 35
+    Attending:
+        - Henrik
+        - Jesper
+        - Dennis
+        - Flemming
+        - Kennet
+        - Thomas
+    Games:
+        Game1:
+            Start: 20.30
+            Winner: Henrik
+            Second: Jesper
+        Game2:
+            Start: 21.00
+            Winner: Dennis
+            Second: Henrik
+        Game3:
+            Start: 21.45
+            Winner: Henrik
+            Second: Flemming
+        Game4:
+            Start: 22.05
+            Winner: Dennis
+            Second: Jesper
+        Game5:
+            Start: 22.45
+            Winner: Kennet
+            Second: Henrik
+        Game6:
+            Start: 23.15
+            Winner: Dennis
+            Second: Kennet
+        Game7:
+            Start: 23.45
+            Winner: Jesper
+            Second: Dennis
+        Game8:
+            Start: 00.10
+            Winner: Thomas
+            Second: Jesper
+        Game9:
+            Start: 00.45
+            Winner: Dennis
+            Second: Flemming
+        Game10:
+            Start: 01.20
+            Winner: Kennet
+            Second: Dennis
+    Errors:
+        Henrik: 0
+        Jesper: 0
+        Dennis: 0
+        Flemming: 0
+        Kennet: 0
+        Thomas: 0
+    Fines:

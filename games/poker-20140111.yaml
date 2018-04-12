@@ -1,0 +1,63 @@
+Pokeraften:
+    Date: 11/01/2014
+    Where: Jesper
+    Season: 5
+    NumberOfPlayers: 6
+    FirstPrize: 120
+    SecondPrize: 30
+    Attending:
+        - Henrik
+        - Dennis
+        - Thomas
+        - Jesper
+        - Mads
+        - Flemming
+    Games:
+        Game1:
+            Start: 19.40
+            Winner: Dennis
+            Second: Flemming
+        Game2:
+            Start: 20.15
+            Winner: Dennis
+            Second: Flemming
+        Game3:
+            Start: 21.15
+            Winner: Flemming
+            Second: Henrik
+        Game4:
+            Start: 22.10
+            Winner: Thomas
+            Second: Henrik
+        Game5:
+            Start: 23.05
+            Winner: Flemming
+            Second: Thomas
+        Game6:
+            Start: 23.50
+            Winner: Mads
+            Second: Jesper
+        Game7:
+            Start: 00.30
+            Winner: Jesper
+            Second: Thomas
+        Game8:
+            Start: 01.30
+            Winner: Dennis
+            Second: Thomas
+        Game9:
+            Start: 02.15
+            Winner: Flemming
+            Second: Thomas
+        Game10:
+            Start: 02.40
+            Winner: Mads
+            Second: Flemming
+    Errors:
+        Henrik: 2
+        Dennis: 2
+        Thomas: 3
+        Jesper: 1
+        Mads: 2
+        Flemming: 0
+    Fines:
