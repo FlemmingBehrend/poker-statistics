@@ -12,6 +12,11 @@ const getters = {
     numberOfPlayers(state) {
         return state.players.length;
     },
+    zeroPopulatedPlayerObject(state) {
+        const players = {};
+        state.players.forEach(player => players[player.id] = 0);
+        return players;
+    },
     playerName: state => id => {
         const expression = "players[?id == `" + id + "`].name.first";
         return jmespath.search(state, expression);

@@ -1,46 +1,33 @@
 <template>
     <div class="box">
-        <div class="header">
-            Deltagelse i pokeraftener ({{pokernights}})
-        </div>
-        <div>
-            <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
-        </div>
-        <b-container class="dates">
-            <b-row>
-                <b-col sm="1">
-                    <label>Fra:</label>
-                </b-col>
-                <b-col>
-                    <b-form-input type="date" v-model="fromDate"></b-form-input>
-                </b-col>
-            </b-row>
-            <b-row>
-                <b-col sm="1">
-                    <label>Til:</label>
-                </b-col>
-                <b-col>
-                    <b-form-input type="date" v-model="toDate"></b-form-input>
-                </b-col>
-            </b-row>
-        </b-container>
+        <div class="header">Deltagelse i pokeraftener ({{pokernights}})</div>
+        <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
+        <date-filter @update="updateChartData"></date-filter>
     </div>
 </template>
 
 <script>
     import AttendanceChart from "../views/attendance-chart";
+    import DateFilter from "../views/date-filter";
     import jmespath from "jmespath";
     import palette from "google-palette";
 
     export default {
+        components: {
+            AttendanceChart,
+            DateFilter
+        },
         data() {
             return {
                 fromDate: undefined,
                 toDate: undefined
             }
         },
-        components: {
-            AttendanceChart
+        methods: {
+            updateChartData(event, fromDate, toDate) {
+                this.fromDate = fromDate;
+                this.toDate = toDate;
+            }
         },
         computed: {
             pokernights() {
@@ -51,7 +38,7 @@
                 const data = [];
                 const attIds = this.$store.getters.attendingRate(this.$data.fromDate, this.$data.toDate);
                 const attArr = {Content: []};
-                const backgroundColors = palette('cb-Greens', this.$store.getters.numberOfPlayers).map(v => "#"+ v).reverse();
+                const backgroundColors = palette(this.graphColorScheme, this.$store.getters.numberOfPlayers).map(v => "#"+ v).reverse();
                 for (let attId in attIds) {
                     if (attIds.hasOwnProperty(attId)) {
                         attArr.Content.push({PlayerId: attId, Attendance: attIds[attId]});
@@ -95,12 +82,4 @@
     vert-align: middle;
     text-align: center;
 }
-.dates {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-    .refresh {
-        width: 100%;
-        height: 100%;
-    }
 </style>

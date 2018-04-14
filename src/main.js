@@ -12,7 +12,15 @@ Vue.config.productionTip = false;
 
 Vue.use(BootstrapVue);
 Vue.component('icon', Icon);
-
+Vue.mixin({
+    data() {
+        return {
+            get graphColorScheme() {
+                return "cb-Greens";
+            }
+        }
+    }
+});
 /* eslint-disable no-new */
 new Vue({
     el: "#app",

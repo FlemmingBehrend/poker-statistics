@@ -16,17 +16,12 @@
 <script>
 import { PLAYERS_FETCH, GAMES_FETCH } from "./store/actions";
 import AttendanceContainer from "./constainers/attendance-container";
-import GamePlacementContainer from "./constainers/game-placement-container";
+import GamePlacementContainer from "./constainers/finals-container";
 
 export default {
-    data() {
-        return {
-            show: false
-        }
-    },
     components: {
         AttendanceContainer,
-        GamePlacementContainer
+        GamePlacementContainer,
     },
     beforeCreate: function() {
         this.$store.dispatch(PLAYERS_FETCH).then(() => {
