@@ -41,7 +41,7 @@
                 const cardErrors = this.$store.getters.cardErrors(this.fromDate, this.toDate);
                 const labels = [];
                 const errors = [];
-                for (let i=1; i<this.$store.getters.numberOfPlayers; i++) {
+                for (let i=1; i<this.$store.getters.numberOfPlayers+1; i++) {
                     labels.push(this.$store.getters.playerName(i));
                     errors.push(jmespath.search(cardErrors, "[?PlayerId==`" + i + "`]|[*].ErrorCount|sum(@)"));
                 }
