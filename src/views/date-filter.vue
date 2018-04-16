@@ -1,13 +1,20 @@
 <template>
-    <b-container class="dates" fluid>
+    <b-container class="dates">
         <b-row>
-            <b-col md="auto" >
+            <b-col>
                 <b-row>
                     <b-col cols="2">
                         <label>Fra:</label>
                     </b-col>
                     <b-col cols="10">
-                        <b-form-input type="date" name="fromDate" v-model="fromDate"></b-form-input>
+                        <b-form-input
+                            type="date"
+                            name="fromDate"
+                            v-model="fromDate"
+                            size="sm"
+                            title="Indtast fra dato (dd-mm-yyyy)"
+                            @blur.native="updateChart">
+                        </b-form-input>
                     </b-col>
                 </b-row>
                 <b-row>
@@ -15,12 +22,16 @@
                         <label>Til:</label>
                     </b-col>
                     <b-col cols="10">
-                        <b-form-input type="date" name="toDate" v-model="toDate"></b-form-input>
+                        <b-form-input
+                            type="date"
+                            name="toDate"
+                            v-model="toDate"
+                            size="sm"
+                            title="Indtast til dato (dd-mm-yyyy)"
+                            @blur.native="updateChart">
+                        </b-form-input>
                     </b-col>
                 </b-row>
-            </b-col>
-            <b-col>
-                <b-button class="refresh" variant="primary"  v-on:click="updateChart"><icon name="sync" scale="1.5"></icon></b-button>
             </b-col>
         </b-row>
     </b-container>
@@ -31,12 +42,12 @@
         data() {
             return {
                 fromDate: undefined,
-                toDate: undefined
+                toDate: undefined,
+                startTooltip: "DD/MM/YYYY"
             }
         },
         methods: {
             updateChart() {
-                console.log('update chart');
                 this.$emit('update', event, this.fromDate, this.toDate);
             }
         }
@@ -48,9 +59,5 @@
         background-color: beige;
         padding-top: 10px;
         padding-bottom: 10px;
-    }
-    .refresh {
-        width: 50px;
-        height: 100%;
     }
 </style>

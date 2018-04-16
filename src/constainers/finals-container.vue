@@ -1,7 +1,9 @@
 <template>
     <div class="box">
-        <div class="header">Finaler ({{numberOfFinals}})</div>
-        <finals-chart :chartData="dataSet"></finals-chart>
+        <div class="header">Finaler
+            <span class="badge badge-light">{{numberOfFinals}}</span>
+        </div>
+        <finals-chart :chartData="dataSet" class="canvas-size"></finals-chart>
         <date-filter @update="updateChartData"></date-filter>
     </div>
 </template>
@@ -10,6 +12,7 @@
     import FinalsChart from "../views/finals-chart";
     import DateFilter from "../views/date-filter";
     import palette from "google-palette";
+    import jmespath from "jmespath";
 
     export default {
         components: {
@@ -31,10 +34,20 @@
         },
         computed: {
             dataSet() {
-                const finals = this.$store.getters.finalists(this.fromDate, this.toDate);
-                const labels = Object.keys(finals.winners).map(id => this.$store.getters.playerName(id)[0]);
-                const firstPlace = Object.keys(finals.winners).map(id => finals.winners[id]);
-                const secondPlace = Object.keys(finals.runnersUp).map(id => finals.runnersUp[id]);
+                const zeroBasedWinnerObj = {};
+                const zeroBasedRunnersUpObj = {};
+                for (let i=1; i<this.$store.getters.getNumberOfPokernights+1; i++) {
+                    zeroBasedWinnerObj[i] = 0;
+                    zeroBasedRunnersUpObj[i] = 0;
+                }
+                const games = this.$store.getters.getGames(this.fromDate, this.toDate);
+                const winsById = jmespath.search(games, "[*].GamesPlayed[*][].WinnerPlayerId").groupIds();
+                const winners = Object.assign(zeroBasedWinnerObj, winsById);
+                const runUpById = jmespath.search(games, "[*].GamesPlayed[*][].SecondPlayerId").groupIds();
+                const runnersUp = Object.assign(zeroBasedRunnersUpObj, runUpById);
+                const labels = Object.keys(winners).map(id => this.$store.getters.playerName(id)[0]);
+                const firstPlace = Object.keys(winners).map(id => winners[id]);
+                const secondPlace = Object.keys(runnersUp).map(id => runnersUp[id]);
                 const backgroundColors = palette(this.graphColorScheme, 2).map(v => "#"+ v).reverse();
                 this.numberOfFinals = firstPlace.reduce((acc, cur) => {
                     return acc + cur;
@@ -61,8 +74,13 @@
 
 <style scoped>
     .box {
-        width: 30vw;
+        margin: 5px;
+        width: 400px;
         border: 1px solid cadetblue;
+    }
+    .canvas-size {
+        /*position: relative;*/
+        height: 400px;
     }
     .header {
         background-color: cadetblue;

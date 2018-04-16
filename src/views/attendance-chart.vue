@@ -9,11 +9,13 @@
                 type: Array | Object,
                 required: true
             }
+
         },
         data() {
             return {
                 options: {
-                    cutoutPercentage: 30,
+                    height: 100,
+                    cutoutPercentage: 20,
                     responsive: true,
                     maintainAspectRatio: false
                 }

@@ -8,8 +8,18 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 import 'vue-awesome/icons/sync'
 import Icon from 'vue-awesome/components/Icon'
 
-Vue.config.productionTip = false;
+Array.prototype.groupIds = function () {
+    return this.reduce((acc, cur) => {
+        if (typeof acc[cur] === "undefined") {
+            acc[cur] = 1;
+        } else {
+            acc[cur] += 1;
+        }
+        return acc;
+    }, {});
+};
 
+Vue.config.productionTip = false;
 Vue.use(BootstrapVue);
 Vue.component('icon', Icon);
 Vue.mixin({

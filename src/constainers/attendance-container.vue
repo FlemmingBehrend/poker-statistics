@@ -1,6 +1,8 @@
 <template>
     <div class="box">
-        <div class="header">Deltagelse i pokeraftener ({{pokernights}})</div>
+        <div class="header">Deltagelse i pokeraftener
+            <span class="badge badge-light">{{pokernights}}</span>
+        </div>
         <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
         <date-filter @update="updateChartData"></date-filter>
     </div>
@@ -31,12 +33,13 @@
         },
         computed: {
             pokernights() {
-                return this.$store.getters.countPokernights(this.$data.fromDate, this.$data.toDate);
+                return this.$store.getters.getNumberOfPokernights(this.$data.fromDate, this.$data.toDate);
             },
             dataSet() {
                 const labels = [];
                 const data = [];
-                const attIds = this.$store.getters.attendingRate(this.$data.fromDate, this.$data.toDate);
+                const games = this.$store.getters.getGames(this.fromDate, this.toDate);
+                const attIds = jmespath.search(games, "[*].AttendingPlayerIds[]").groupIds();
                 const attArr = {Content: []};
                 const backgroundColors = palette(this.graphColorScheme, this.$store.getters.numberOfPlayers).map(v => "#"+ v).reverse();
                 for (let attId in attIds) {
@@ -65,13 +68,13 @@
 
 <style scoped>
 .box {
-    width: 20vw;
+    width: 400px;
     border: 1px solid cadetblue;
+    margin: 5px;
 }
 .canvas-size {
-    position: relative;
-    height: 40vh;
-    width: 20vw;
+    /*position: relative;*/
+    height: 400px;
 }
 .header {
     background-color: cadetblue;
