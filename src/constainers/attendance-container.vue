@@ -33,12 +33,12 @@
         },
         computed: {
             pokernights() {
-                return this.$store.getters.getNumberOfPokernights(this.$data.fromDate, this.$data.toDate);
+                return this.$store.getters.numberOfPokernights(this.$data.fromDate, this.$data.toDate);
             },
             dataSet() {
                 const labels = [];
                 const data = [];
-                const games = this.$store.getters.getGames(this.fromDate, this.toDate);
+                const games = this.$store.getters.games(this.fromDate, this.toDate);
                 const attIds = jmespath.search(games, "[*].AttendingPlayerIds[]").groupIds();
                 const attArr = {Content: []};
                 const backgroundColors = palette(this.graphColorScheme, this.$store.getters.numberOfPlayers).map(v => "#"+ v).reverse();
@@ -73,7 +73,6 @@
     margin: 5px;
 }
 .canvas-size {
-    /*position: relative;*/
     height: 400px;
 }
 .header {

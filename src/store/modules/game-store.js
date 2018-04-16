@@ -24,12 +24,36 @@ const defaultStartDate = "2000-01-01";
 const defaultEndDate = "2050-01-01";
 
 const getters = {
-    getNumberOfPokernights: state => (from = defaultStartDate, to = defaultEndDate) => {
+    numberOfPokernights: state => (from = defaultStartDate, to = defaultEndDate) => {
         return filterByDate(state.games, from, to).length;
     },
-    getGames: state => (from = defaultStartDate, to = defaultEndDate) => {
+    games: state => (from = defaultStartDate, to = defaultEndDate) => {
         return filterByDate(state.games, from, to);
     },
+    winnings: state => (from = defaultStartDate, to = defaultEndDate) => {
+        const pokernights = filterByDate(state.games, from, to);
+        const winnings = [];
+        pokernights.forEach(pokernight => {
+            const firstPrize = pokernight.Info.FirstPrize;
+            const secondPrize = pokernight.Info.SecondPrize;
+            pokernight.GamesPlayed.forEach(game => {
+                const obj = {
+                    game: {
+                        win: {
+                            id: game.WinnerPlayerId,
+                            prize: firstPrize
+                        },
+                        second: {
+                            id: game.SecondPlayerId,
+                            prize: secondPrize
+                        }
+                    }
+                };
+                winnings.push(obj);
+            })
+        });
+        return winnings;
+    }
 };
 
 const mutations = {

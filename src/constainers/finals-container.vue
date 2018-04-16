@@ -36,11 +36,11 @@
             dataSet() {
                 const zeroBasedWinnerObj = {};
                 const zeroBasedRunnersUpObj = {};
-                for (let i=1; i<this.$store.getters.getNumberOfPokernights+1; i++) {
+                for (let i=1; i<this.$store.getters.numberOfPokernights+1; i++) {
                     zeroBasedWinnerObj[i] = 0;
                     zeroBasedRunnersUpObj[i] = 0;
                 }
-                const games = this.$store.getters.getGames(this.fromDate, this.toDate);
+                const games = this.$store.getters.games(this.fromDate, this.toDate);
                 const winsById = jmespath.search(games, "[*].GamesPlayed[*][].WinnerPlayerId").groupIds();
                 const winners = Object.assign(zeroBasedWinnerObj, winsById);
                 const runUpById = jmespath.search(games, "[*].GamesPlayed[*][].SecondPlayerId").groupIds();
@@ -79,7 +79,6 @@
         border: 1px solid cadetblue;
     }
     .canvas-size {
-        /*position: relative;*/
         height: 400px;
     }
     .header {
