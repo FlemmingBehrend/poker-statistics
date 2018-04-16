@@ -45,7 +45,7 @@
                 const winners = Object.assign(zeroBasedWinnerObj, winsById);
                 const runUpById = jmespath.search(games, "[*].GamesPlayed[*][].SecondPlayerId").groupIds();
                 const runnersUp = Object.assign(zeroBasedRunnersUpObj, runUpById);
-                const labels = Object.keys(winners).map(id => this.$store.getters.playerName(id)[0]);
+                const labels = Object.keys(winners).map(id => this.$store.getters.playerName(id));
                 const firstPlace = Object.keys(winners).map(id => winners[id]);
                 const secondPlace = Object.keys(runnersUp).map(id => runnersUp[id]);
                 const backgroundColors = palette(this.graphColorScheme, 2).map(v => "#"+ v).reverse();

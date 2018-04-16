@@ -11,7 +11,7 @@
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
-                <span class="nav-item version">v0.1.0</span>
+                <span class="nav-item version">v0.1.1</span>
             </div>
         </nav>
         <main role="main" class="container-fluid row">

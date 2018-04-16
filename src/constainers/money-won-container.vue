@@ -50,7 +50,7 @@
                 for (let i=1; i<this.$store.getters.numberOfPlayers; i++) {
                     labels.push(this.$store.getters.playerName(i));
                     winPrizes.push(jmespath.search(winnings, "[*].game|[?win.id==`" + i + "`].win.prize|sum(@)"));
-                    secondPrizes.push(jmespath.search(winnings, "[*].game|[?second.id==`" + i + "`].win.prize|sum(@)"));
+                    secondPrizes.push(jmespath.search(winnings, "[*].game|[?second.id==`" + i + "`].second.prize|sum(@)"));
                 }
                 return {
                     labels: labels,
