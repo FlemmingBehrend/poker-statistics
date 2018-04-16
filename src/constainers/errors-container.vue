@@ -1,23 +1,22 @@
 <template>
     <div class="box">
-        <div class="header">Præmier
-            <span class="badge badge-light">1= {{totalFirstPrizeMoney}} kr</span>
-            <span class="badge badge-light">2= {{totalSecondPrizeMoney}} kr</span>
+        <div class="header">Kort fejl
+            <span class="badge badge-light">{{errorsTotal}}</span>
         </div>
-        <money-won-chart :chartData="dataSet" class="canvas-size"></money-won-chart>
+        <errors-chart :chartData="dataSet" class="canvas-size"></errors-chart>
         <date-filter @update="updateChartData"></date-filter>
     </div>
 </template>
 
 <script>
     import DateFilter from "../views/date-filter";
-    import MoneyWonChart from "../views/money-won-chart";
+    import ErrorsChart from "../views/errors-chart";
     import palette from "google-palette";
     import jmespath  from "jmespath";
 
     export default {
         components: {
-            MoneyWonChart,
+            ErrorsChart,
             DateFilter
         },
         data() {
@@ -33,37 +32,26 @@
             }
         },
         computed: {
-            totalFirstPrizeMoney() {
-                const winnings = this.$store.getters.winnings(this.fromDate, this.toDate);
-                return jmespath.search(winnings, "[*].game.win.prize|sum(@)");
-            },
-            totalSecondPrizeMoney() {
-                const winnings = this.$store.getters.winnings(this.fromDate, this.toDate);
-                return jmespath.search(winnings, "[*].game.second.prize|sum(@)");
+            errorsTotal() {
+                const cardErrors = this.$store.getters.cardErrors(this.fromDate, this.toDate);
+                return jmespath.search(cardErrors, "[*].ErrorCount|sum(@)");
             },
             dataSet() {
                 const backgroundColors = palette(this.graphColorScheme, 2).map(v => "#"+ v).reverse();
-                const winnings = this.$store.getters.winnings(this.fromDate, this.toDate);
+                const cardErrors = this.$store.getters.cardErrors(this.fromDate, this.toDate);
                 const labels = [];
-                const winPrizes = [];
-                const secondPrizes = [];
+                const errors = [];
                 for (let i=1; i<this.$store.getters.numberOfPlayers; i++) {
                     labels.push(this.$store.getters.playerName(i));
-                    winPrizes.push(jmespath.search(winnings, "[*].game|[?win.id==`" + i + "`].win.prize|sum(@)"));
-                    secondPrizes.push(jmespath.search(winnings, "[*].game|[?second.id==`" + i + "`].second.prize|sum(@)"));
+                    errors.push(jmespath.search(cardErrors, "[?PlayerId==`" + i + "`]|[*].ErrorCount|sum(@)"));
                 }
                 return {
                     labels: labels,
                     datasets: [
                         {
-                            label: 'Førsteplads præmie (kr)',
+                            label: 'Fejl',
                             backgroundColor: backgroundColors[0],
-                            data: winPrizes
-                        },
-                        {
-                            label: 'Andenplads præmie (kr)',
-                            backgroundColor: backgroundColors[1],
-                            data: secondPrizes
+                            data: errors
                         }
                     ]
                 }

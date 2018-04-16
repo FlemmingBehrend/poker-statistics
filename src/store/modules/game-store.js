@@ -1,4 +1,5 @@
 import {GAMES_FETCH} from "../actions";
+import jmespath from "jmespath";
 
 function convertDate(str) {
     const [year, month, day] = str.split("-");
@@ -53,6 +54,10 @@ const getters = {
             })
         });
         return winnings;
+    },
+    cardErrors: state => (from = defaultStartDate, to = defaultEndDate) => {
+        const pokernights = filterByDate(state.games, from, to);
+        return jmespath.search(pokernights, "[*].Errors[]")
     }
 };
 

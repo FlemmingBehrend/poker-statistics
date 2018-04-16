@@ -11,13 +11,14 @@
                         <a class="nav-link" href="#">Link</a>
                     </li>
                 </ul>
-                <span class="nav-item version">v0.1.1</span>
+                <span class="nav-item version">v0.2.0</span>
             </div>
         </nav>
         <main role="main" class="container-fluid row">
-                <attendance-container></attendance-container>
-                <game-placement-container></game-placement-container>
-                <money-won-container></money-won-container>
+            <attendance-container></attendance-container>
+            <game-placement-container></game-placement-container>
+            <money-won-container></money-won-container>
+            <errors-container></errors-container>
         </main>
     </div>
 </template>
@@ -27,9 +28,11 @@
     import AttendanceContainer from "./constainers/attendance-container";
     import GamePlacementContainer from "./constainers/finals-container";
     import MoneyWonContainer from "./constainers/money-won-container";
+    import ErrorsContainer from "./constainers/errors-container";
 
     export default {
         components: {
+            ErrorsContainer,
             AttendanceContainer,
             GamePlacementContainer,
             MoneyWonContainer,
@@ -48,6 +51,7 @@
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
+
     .version {
         color: cadetblue;
     }
