@@ -2,7 +2,8 @@ const fs = require('fs');
 const yaml = require('js-yaml');
 const jmespath = require('jmespath');
 const players = require('./static/players.json');
-
+const moment = require('moment');
+moment.locale('da');
 const games = [];
 
 function mapPlayerToId(name) {
@@ -21,7 +22,9 @@ fs.readdir('games', function(err, items) {
         gameState.Info = {};
         gameState.Info.LocationPlayerId = mapPlayerToId(pokeraften.Where);
         const [day, month, year] = pokeraften.Date.split("/");
-        gameState.Info.Date = new Date(`${year}-${month}-${day}`);
+        const date = new Date(`${year}-${month}-${day}`);
+        const formattedDate = moment(date).format('YYYY-MM-DD');
+        gameState.Info.Date = formattedDate;
         gameState.Info.FirstPrize = pokeraften.FirstPrize;
         gameState.Info.SecondPrize = pokeraften.SecondPrize;
         gameState.AttendingPlayerIds = [];

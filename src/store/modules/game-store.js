@@ -1,14 +1,11 @@
 import {GAMES_FETCH} from "../actions";
 import jmespath from "jmespath";
-
-function convertDate(str) {
-    const [year, month, day] = str.split("-");
-    return new Date(`${year}-${month}-${day}`);
-}
+import moment from "moment";
+moment.locale('da');
 
 function filterByDate(games, from, to) {
-    const fromDate = convertDate(from);
-    const toDate = convertDate(to);
+    const fromDate = new Date(from);
+    const toDate = new Date(to);
     return games.filter(game => {
         const date = new Date(game.Info.Date);
         if (fromDate.getTime() <= date.getTime() && toDate.getTime() >= date.getTime()) {
@@ -58,6 +55,13 @@ const getters = {
     cardErrors: state => (from = defaultStartDate, to = defaultEndDate) => {
         const pokernights = filterByDate(state.games, from, to);
         return jmespath.search(pokernights, "[*].Errors[]")
+    },
+    pokernightDates: state => {
+        const pokerDates = jmespath.search(state.games, '[*].Info.Date');
+        return pokerDates.map(date => {
+            const renderDate = moment(date).format('LL');
+            return {date: date, renderDate: renderDate};
+        });
     }
 };
 

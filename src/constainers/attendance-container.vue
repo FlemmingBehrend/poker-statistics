@@ -1,30 +1,23 @@
 <template>
     <div class="box">
         <div class="header">Deltagelse i pokeraftener
-            <span class="badge badge-light">{{pokernights}}</span>
+            <span class="badge badge-light">{{numberOfPokernights}}</span>
         </div>
         <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
-        <date-filter v-if="filterOnDate" @update="updateChartData"></date-filter>
-        <season-filter v-if="filterOnSeason"></season-filter>
-        <pokernight-filter v-if="filterOnPokernight"></pokernight-filter>
+        <filter-container @update-chart-data="updateChartData"></filter-container>
     </div>
 </template>
 
 <script>
     import AttendanceChart from "../views/attendance-chart";
-    import DateFilter from "../views/date-filter";
-    import SeasonFilter from "../views/season-filter";
-    import PokernightFilter from "../views/pokernight-filter";
     import jmespath from "jmespath";
     import palette from "google-palette";
-    import {mapGetters} from 'vuex';
+    import FilterContainer from "./filter-container";
 
     export default {
         components: {
+            FilterContainer,
             AttendanceChart,
-            DateFilter,
-            SeasonFilter,
-            PokernightFilter
         },
         data() {
             return {
@@ -34,17 +27,15 @@
         },
         methods: {
             updateChartData(event, fromDate, toDate) {
+                console.log('event',event);
+                console.log('fromDate', fromDate);
+                console.log('toDate', toDate);
                 this.fromDate = fromDate;
                 this.toDate = toDate;
-            }
+            },
         },
         computed: {
-            ...mapGetters({
-                filterOnDate: 'filterOnDate',
-                filterOnSeason: 'filterOnSeason',
-                filterOnPokernight: 'filterOnPokernight'
-            }),
-            pokernights() {
+            numberOfPokernights() {
                 return this.$store.getters.numberOfPokernights(this.$data.fromDate, this.$data.toDate);
             },
             dataSet() {

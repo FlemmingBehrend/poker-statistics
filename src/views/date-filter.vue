@@ -39,6 +39,7 @@
 
 <script>
     export default {
+        name: 'date-filter',
         data() {
             return {
                 fromDate: undefined,
@@ -48,7 +49,7 @@
         },
         methods: {
             updateChart() {
-                this.$emit('update', event, this.fromDate, this.toDate);
+                this.$emit('update-by-date', event, this.fromDate, this.toDate);
             }
         }
     }
