@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import FinalsChart from "../views/finals-chart";
+    import FinalsChart from "../views/charts/finals-chart";
     import palette from "google-palette";
     import jmespath from "jmespath";
     import FilterContainer from "./filter-container";

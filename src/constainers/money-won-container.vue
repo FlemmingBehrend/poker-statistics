@@ -10,7 +10,7 @@
 </template>
 
 <script>
-    import MoneyWonChart from "../views/money-won-chart";
+    import MoneyWonChart from "../views/charts/money-won-chart";
     import FilterContainer from "./filter-container";
     import palette from "google-palette";
     import jmespath  from "jmespath";

@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import FormCurveChart from "../views/form-curve-chart";
+    import FormCurveChart from "../views/charts/form-curve-chart";
 
     export default {
         components: {FormCurveChart},

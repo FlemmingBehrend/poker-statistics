@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import AttendanceChart from "../views/attendance-chart";
+    import AttendanceChart from "../views/charts/attendance-chart";
     import jmespath from "jmespath";
     import palette from "google-palette";
     import FilterContainer from "./filter-container";

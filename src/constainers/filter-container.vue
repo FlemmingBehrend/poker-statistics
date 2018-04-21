@@ -13,8 +13,8 @@
 
 <script>
     import {mapGetters} from 'vuex';
-    import DateFilter from './../views/date-filter';
-    import PokernightFilter from './../views/pokernight-filter';
+    import DateFilter from '../views/filters/date-filter';
+    import PokernightFilter from '../views/filters/pokernight-filter';
 
     export default {
         components: {

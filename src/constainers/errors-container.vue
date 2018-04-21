@@ -9,7 +9,7 @@
 </template>
 
 <script>
-    import ErrorsChart from "../views/errors-chart";
+    import ErrorsChart from "../views/charts/errors-chart";
     import palette from "google-palette";
     import jmespath  from "jmespath";
     import FilterContainer from "./filter-container";

@@ -57,10 +57,10 @@ const getters = {
         return jmespath.search(pokernights, "[*].Errors[]")
     },
     pokernightDates: state => {
-        const pokerDates = jmespath.search(state.games, '[*].Info.Date');
+        const pokerDates = jmespath.search(state.games, '[*].Info.Date|sort(@)|reverse(@)');
         return pokerDates.map(date => {
-            const renderDate = moment(date).format('LL');
-            return {date: date, renderDate: renderDate};
+            const m = moment(date);
+            return {date: date, renderDate: m.format('ll'), renderFromNow: m.fromNow()};
         });
     }
 };

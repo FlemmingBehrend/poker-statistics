@@ -2,12 +2,9 @@
 import Vue from "vue";
 import MyHybridApp from "./hybrid-app";
 import store from "./store/store";
-import BootstrapVue from "bootstrap-vue";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap-vue/dist/bootstrap-vue.css";
-import 'vue-awesome/icons/sync'
-import Icon from 'vue-awesome/components/Icon'
-import * as VueMenu from '@hscmap/vue-menu'
+import * as VueMenu from "@hscmap/vue-menu";
+require("bootstrap/dist/css/bootstrap.min.css");
+require("bootstrap/dist/js/bootstrap.min");
 
 Array.prototype.groupIds = function () {
     return this.reduce((acc, cur) => {
@@ -21,10 +18,8 @@ Array.prototype.groupIds = function () {
 };
 
 Vue.config.productionTip = false;
-Vue.use(BootstrapVue);
-Vue.use(VueMenu)
+Vue.use(VueMenu);
 
-Vue.component('icon', Icon);
 Vue.mixin({
     data() {
         return {

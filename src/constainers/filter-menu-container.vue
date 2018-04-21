@@ -3,7 +3,7 @@
 </template>
 
 <script>
-import FilterMenu from "../views/filter-menu";
+import FilterMenu from "../views/menu/filter-menu";
 import { FILTER_UPDATE } from "../store/actions";
 
 export default {

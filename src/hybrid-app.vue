@@ -1,6 +1,6 @@
 <template>
     <div id="app">
-        <nav class="navbar navbar-expand navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Pokerklanen statistik</a>
             <div class="collapse navbar-collapse">
                 <div class="navbar-nav mr-auto">
@@ -14,7 +14,7 @@
             <game-placement-container></game-placement-container>
             <money-won-container></money-won-container>
             <errors-container></errors-container>
-            <!--<form-curve-container></form-curve-container>-->
+            <form-curve-container></form-curve-container>
         </main>
     </div>
 </template>
