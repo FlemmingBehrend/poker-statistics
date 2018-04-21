@@ -4,20 +4,27 @@
             <span class="badge badge-light">{{pokernights}}</span>
         </div>
         <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
-        <date-filter @update="updateChartData"></date-filter>
+        <date-filter v-if="filterOnDate" @update="updateChartData"></date-filter>
+        <season-filter v-if="filterOnSeason"></season-filter>
+        <pokernight-filter v-if="filterOnPokernight"></pokernight-filter>
     </div>
 </template>
 
 <script>
     import AttendanceChart from "../views/attendance-chart";
     import DateFilter from "../views/date-filter";
+    import SeasonFilter from "../views/season-filter";
+    import PokernightFilter from "../views/pokernight-filter";
     import jmespath from "jmespath";
     import palette from "google-palette";
+    import {mapGetters} from 'vuex';
 
     export default {
         components: {
             AttendanceChart,
-            DateFilter
+            DateFilter,
+            SeasonFilter,
+            PokernightFilter
         },
         data() {
             return {
@@ -32,6 +39,11 @@
             }
         },
         computed: {
+            ...mapGetters({
+                filterOnDate: 'filterOnDate',
+                filterOnSeason: 'filterOnSeason',
+                filterOnPokernight: 'filterOnPokernight'
+            }),
             pokernights() {
                 return this.$store.getters.numberOfPokernights(this.$data.fromDate, this.$data.toDate);
             },

@@ -4,20 +4,27 @@
             <span class="badge badge-light">{{numberOfFinals}}</span>
         </div>
         <finals-chart :chartData="dataSet" class="canvas-size"></finals-chart>
-        <date-filter @update="updateChartData"></date-filter>
+        <date-filter v-if="filterOnDate" @update="updateChartData"></date-filter>
+        <season-filter v-if="filterOnSeason"></season-filter>
+        <pokernight-filter v-if="filterOnPokernight"></pokernight-filter>
     </div>
 </template>
 
 <script>
     import FinalsChart from "../views/finals-chart";
     import DateFilter from "../views/date-filter";
+    import SeasonFilter from "../views/season-filter";
+    import PokernightFilter from "../views/pokernight-filter";
     import palette from "google-palette";
     import jmespath from "jmespath";
+    import {mapGetters} from 'vuex';
 
     export default {
         components: {
             FinalsChart,
-            DateFilter
+            DateFilter,
+            SeasonFilter,
+            PokernightFilter
         },
         data() {
             return {
@@ -33,6 +40,11 @@
             }
         },
         computed: {
+            ...mapGetters({
+                filterOnDate: 'filterOnDate',
+                filterOnSeason: 'filterOnSeason',
+                filterOnPokernight: 'filterOnPokernight'
+            }),
             dataSet() {
                 const zeroBasedWinnerObj = {};
                 const zeroBasedRunnersUpObj = {};

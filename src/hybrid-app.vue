@@ -3,14 +3,9 @@
         <nav class="navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="#">Pokerklanen statistik</a>
             <div class="collapse navbar-collapse">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                </ul>
+                <div class="navbar-nav mr-auto">
+                    <filter-menu-container></filter-menu-container>
+                </div>
                 <span class="nav-item version">v0.2.0</span>
             </div>
         </nav>
@@ -19,6 +14,7 @@
             <game-placement-container></game-placement-container>
             <money-won-container></money-won-container>
             <errors-container></errors-container>
+            <!--<form-curve-container></form-curve-container>-->
         </main>
     </div>
 </template>
@@ -29,9 +25,13 @@
     import GamePlacementContainer from "./constainers/finals-container";
     import MoneyWonContainer from "./constainers/money-won-container";
     import ErrorsContainer from "./constainers/errors-container";
+    import FormCurveContainer from "./constainers/form-curve-container";
+    import FilterMenuContainer from "./constainers/filter-menu-container";
 
     export default {
         components: {
+            FilterMenuContainer,
+            FormCurveContainer,
             ErrorsContainer,
             AttendanceContainer,
             GamePlacementContainer,
