@@ -19,7 +19,7 @@ const getters = {
 };
 
 const mutations = {
-    [PLAYERS_FETCH](state, players) {
+    setPlayers(state, players) {
         state.players = players;
     }
 };
@@ -32,7 +32,7 @@ const actions = {
                     return response.json();
                 })
                 .then(json => {
-                    commit(PLAYERS_FETCH, json.players);
+                    commit('setPlayers', json.players);
                 });
             resolve();
         })

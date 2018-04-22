@@ -4,8 +4,8 @@
             <span class="badge badge-light">1= {{totalFirstPrizeMoney}} kr</span>
             <span class="badge badge-light">2= {{totalSecondPrizeMoney}} kr</span>
         </div>
-        <money-won-chart :chartData="dataSet" class="canvas-size"></money-won-chart>
-        <filter-container @update-chart-data="updateChartData"></filter-container>
+        <money-won-chart :chart-data="dataSet" class="canvas-size"></money-won-chart>
+        <filter-container :graph-type="graphType"></filter-container>
     </div>
 </template>
 
@@ -14,6 +14,7 @@
     import FilterContainer from "./filter-container";
     import palette from "google-palette";
     import jmespath  from "jmespath";
+    import {MONEY_WON_CHART} from "../store/graph-types";
 
     export default {
         components: {
@@ -22,28 +23,21 @@
         },
         data() {
             return {
-                fromDate: undefined,
-                toDate: undefined,
-            }
-        },
-        methods: {
-            updateChartData(event, fromDate, toDate) {
-                this.fromDate = fromDate;
-                this.toDate = toDate;
+                graphType: MONEY_WON_CHART
             }
         },
         computed: {
             totalFirstPrizeMoney() {
-                const winnings = this.$store.getters.winnings(this.fromDate, this.toDate);
+                const winnings = this.$store.getters.winnings(this.graphType);
                 return jmespath.search(winnings, "[*].game.win.prize|sum(@)");
             },
             totalSecondPrizeMoney() {
-                const winnings = this.$store.getters.winnings(this.fromDate, this.toDate);
+                const winnings = this.$store.getters.winnings(this.graphType);
                 return jmespath.search(winnings, "[*].game.second.prize|sum(@)");
             },
             dataSet() {
                 const backgroundColors = palette(this.graphColorScheme, 2).map(v => "#"+ v).reverse();
-                const winnings = this.$store.getters.winnings(this.fromDate, this.toDate);
+                const winnings = this.$store.getters.winnings(this.graphType);
                 const labels = [];
                 const winPrizes = [];
                 const secondPrizes = [];

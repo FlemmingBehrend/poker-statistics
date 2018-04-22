@@ -3,16 +3,17 @@
         <div class="header">Kort fejl
             <span class="badge badge-light">{{errorsTotal}}</span>
         </div>
-        <errors-chart :chartData="dataSet" class="canvas-size"></errors-chart>
-        <filter-container @update-chart-data="updateChartData"></filter-container>
+        <errors-chart :chart-data="dataSet" class="canvas-size"></errors-chart>
+        <filter-container :graph-type="graphType"></filter-container>
     </div>
 </template>
 
 <script>
-    import ErrorsChart from "../views/charts/errors-chart";
+    import ErrorsChart from "../views/charts/card-errors-chart";
     import palette from "google-palette";
     import jmespath  from "jmespath";
     import FilterContainer from "./filter-container";
+    import {CARD_ERRORS_CHART} from "../store/graph-types";
 
     export default {
         components: {
@@ -21,24 +22,17 @@
         },
         data() {
             return {
-                fromDate: undefined,
-                toDate: undefined,
-            }
-        },
-        methods: {
-            updateChartData(event, fromDate, toDate) {
-                this.fromDate = fromDate;
-                this.toDate = toDate;
+                graphType: CARD_ERRORS_CHART
             }
         },
         computed: {
             errorsTotal() {
-                const cardErrors = this.$store.getters.cardErrors(this.fromDate, this.toDate);
+                const cardErrors = this.$store.getters.cardErrors(this.graphType);
                 return jmespath.search(cardErrors, "[*].ErrorCount|sum(@)");
             },
             dataSet() {
                 const backgroundColors = palette(this.graphColorScheme, 2).map(v => "#"+ v).reverse();
-                const cardErrors = this.$store.getters.cardErrors(this.fromDate, this.toDate);
+                const cardErrors = this.$store.getters.cardErrors(this.graphType);
                 const labels = [];
                 const errors = [];
                 for (let i=1; i<this.$store.getters.numberOfPlayers+1; i++) {

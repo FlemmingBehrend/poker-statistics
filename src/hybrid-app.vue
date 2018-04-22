@@ -6,15 +6,15 @@
                 <div class="navbar-nav mr-auto">
                     <filter-menu-container></filter-menu-container>
                 </div>
-                <span class="nav-item version">v0.2.0</span>
+                <span class="nav-item version">v0.3.0</span>
             </div>
         </nav>
         <main role="main" class="container-fluid row">
             <attendance-container></attendance-container>
-            <game-placement-container></game-placement-container>
+            <finals-container></finals-container>
             <money-won-container></money-won-container>
             <errors-container></errors-container>
-            <form-curve-container></form-curve-container>
+            <!--<form-curve-container></form-curve-container>-->
         </main>
     </div>
 </template>
@@ -22,9 +22,9 @@
 <script>
     import {GAMES_FETCH, PLAYERS_FETCH} from "./store/actions";
     import AttendanceContainer from "./constainers/attendance-container";
-    import GamePlacementContainer from "./constainers/finals-container";
+    import FinalsContainer from "./constainers/finals-container";
     import MoneyWonContainer from "./constainers/money-won-container";
-    import ErrorsContainer from "./constainers/errors-container";
+    import ErrorsContainer from "./constainers/card-errors-container";
     import FormCurveContainer from "./constainers/form-curve-container";
     import FilterMenuContainer from "./constainers/filter-menu-container";
 
@@ -34,7 +34,7 @@
             FormCurveContainer,
             ErrorsContainer,
             AttendanceContainer,
-            GamePlacementContainer,
+            FinalsContainer,
             MoneyWonContainer,
         },
         beforeCreate: function() {

@@ -3,8 +3,8 @@
         <div class="header">Deltagelse i pokeraftener
             <span class="badge badge-light">{{numberOfPokernights}}</span>
         </div>
-        <attendance-chart :chartData="dataSet" class="canvas-size"></attendance-chart>
-        <filter-container @update-chart-data="updateChartData"></filter-container>
+        <attendance-chart :chart-data="dataSet" class="canvas-size"></attendance-chart>
+        <filter-container :graph-type="graphType"></filter-container>
     </div>
 </template>
 
@@ -13,6 +13,7 @@
     import jmespath from "jmespath";
     import palette from "google-palette";
     import FilterContainer from "./filter-container";
+    import {ATTENDANCE_CHART} from "../store/graph-types";
 
     export default {
         components: {
@@ -21,27 +22,17 @@
         },
         data() {
             return {
-                fromDate: undefined,
-                toDate: undefined
+                graphType: ATTENDANCE_CHART
             }
-        },
-        methods: {
-            updateChartData(event, fromDate, toDate) {
-                console.log('event',event);
-                console.log('fromDate', fromDate);
-                console.log('toDate', toDate);
-                this.fromDate = fromDate;
-                this.toDate = toDate;
-            },
         },
         computed: {
             numberOfPokernights() {
-                return this.$store.getters.numberOfPokernights(this.$data.fromDate, this.$data.toDate);
+                return this.$store.getters.numberOfPokernights(this.graphType);
             },
             dataSet() {
                 const labels = [];
                 const data = [];
-                const games = this.$store.getters.games(this.fromDate, this.toDate);
+                const games = this.$store.getters.games(this.graphType);
                 const attIds = jmespath.search(games, "[*].AttendingPlayerIds[]").groupIds();
                 const attArr = {Content: []};
                 const backgroundColors = palette(this.graphColorScheme, this.$store.getters.numberOfPlayers).map(v => "#"+ v).reverse();

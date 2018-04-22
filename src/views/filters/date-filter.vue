@@ -12,7 +12,7 @@
                     v-model="fromDate"
                     size="sm"
                     title="Indtast fra dato (dd-mm-yyyy)"
-                    @blur.native="updateChart">
+                    @blur="updateFromDate">
             </div>
         </div>
         <div class="col">
@@ -27,7 +27,7 @@
                     v-model="toDate"
                     size="sm"
                     title="Indtast til dato (dd-mm-yyyy)"
-                    @blur.native="updateChart">
+                    @blur="updateToDate">
             </div>
         </div>
     </div>
@@ -40,12 +40,15 @@
             return {
                 fromDate: undefined,
                 toDate: undefined,
-                startTooltip: "DD/MM/YYYY"
+                startTooltip: "DD/MM/ÅÅÅÅ"
             }
         },
         methods: {
-            updateChart() {
-                this.$emit('update-by-date', event, this.fromDate, this.toDate);
+            updateFromDate() {
+                this.$emit('update-by-from-date', event, this.fromDate);
+            },
+            updateToDate() {
+                this.$emit('update-by-to-date', event, this.toDate);
             }
         }
     }

@@ -4,7 +4,7 @@
 
 <script>
 import FilterMenu from "../views/menu/filter-menu";
-import { FILTER_UPDATE } from "../store/actions";
+import { FILTER_UPDATE, FILTER_DATE_RESET } from "../store/actions";
 
 export default {
     components: {
@@ -17,7 +17,9 @@ export default {
     },
     methods: {
         updateFilter(event, val) {
-            this.$store.dispatch(FILTER_UPDATE, val);
+            this.$store.dispatch(FILTER_DATE_RESET).then(() => {
+                this.$store.dispatch(FILTER_UPDATE, val);
+            });
         }
     }
 };

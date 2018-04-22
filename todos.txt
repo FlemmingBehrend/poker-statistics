@@ -1,0 +1,20 @@
+* filter dates moved to vuex
+filter state skal mådke deles op som
+
+filter: {
+    dates: {
+        attendance: {
+            from:
+            to:
+        },
+        finals: {
+            from:
+            to:
+        },
+        ..
+        ..
+
+    }
+}
+
+global filtering skal så ændre alle states.

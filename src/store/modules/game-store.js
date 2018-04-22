@@ -18,17 +18,20 @@ const state = {
     games: []
 };
 
-const defaultStartDate = "2000-01-01";
-const defaultEndDate = "2050-01-01";
-
 const getters = {
-    numberOfPokernights: state => (from = defaultStartDate, to = defaultEndDate) => {
+    numberOfPokernights: (state, getters) => graphType => {
+        const from = getters.filterFromDate(graphType);
+        const to = getters.filterToDate(graphType);
         return filterByDate(state.games, from, to).length;
     },
-    games: state => (from = defaultStartDate, to = defaultEndDate) => {
+    games: (state, getters) => graphType =>{
+        const from = getters.filterFromDate(graphType);
+        const to = getters.filterToDate(graphType);
         return filterByDate(state.games, from, to);
     },
-    winnings: state => (from = defaultStartDate, to = defaultEndDate) => {
+    winnings: (state, getters) => graphType => {
+        const from = getters.filterFromDate(graphType);
+        const to = getters.filterToDate(graphType);
         const pokernights = filterByDate(state.games, from, to);
         const winnings = [];
         pokernights.forEach(pokernight => {
@@ -52,7 +55,9 @@ const getters = {
         });
         return winnings;
     },
-    cardErrors: state => (from = defaultStartDate, to = defaultEndDate) => {
+    cardErrors: (state, getters) => graphType => {
+        const from = getters.filterFromDate(graphType);
+        const to = getters.filterToDate(graphType);
         const pokernights = filterByDate(state.games, from, to);
         return jmespath.search(pokernights, "[*].Errors[]")
     },
@@ -62,11 +67,36 @@ const getters = {
             const m = moment(date);
             return {date: date, renderDate: m.format('ll'), renderFromNow: m.fromNow()};
         });
+    },
+    seasonDates: state => {
+        const seasons = jmespath.search(state.games, '[*].{Season: Season, Date: Info.Date}');
+        const seasonsDates = [];
+        const datesInSeasons = seasons.reduce((acc, cur) => {
+            if (acc.hasOwnProperty(cur.Season)) {
+                acc[cur.Season].push(moment(cur.Date));
+            } else {
+                acc[cur.Season] = [];
+                acc[cur.Season].push(moment(cur.Date));
+            }
+            return acc;
+        }, {});
+        for (const key in datesInSeasons) {
+            if (datesInSeasons.hasOwnProperty(key)) {
+                const minDate = Math.min(...datesInSeasons[key]);
+                const maxDate = Math.max(...datesInSeasons[key]);
+                seasonsDates.push({
+                    season: key,
+                    firstDate: moment(minDate).format('YYYY-MM-DD'),
+                    lastDate: moment(maxDate).format('YYYY-MM-DD')
+                });
+            }
+        }
+        return seasonsDates;
     }
 };
 
 const mutations = {
-    [GAMES_FETCH](state, games) {
+    setGames(state, games) {
         state.games = games;
     }
 };
@@ -78,7 +108,7 @@ const actions = {
                     return response.json();
                 })
                 .then(json => {
-                    commit(GAMES_FETCH, json);
+                    commit('setGames', json);
                 });
             resolve();
         })
@@ -89,5 +119,5 @@ export default {
     state,
     getters,
     mutations,
-    actions
+    actions,
 };
