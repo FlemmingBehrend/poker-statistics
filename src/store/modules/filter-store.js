@@ -1,4 +1,11 @@
-import {FILTER_DATE_RESET, FILTER_DATE_SET, FILTER_DATE_SET_FROM, FILTER_DATE_SET_TO, FILTER_UPDATE} from "../actions";
+import {
+    FILTER_DATE_RESET,
+    FILTER_DATE_SET, FILTER_DATE_SET_ALL_FROM, FILTER_DATE_SET_ALL_TO,
+    FILTER_DATE_SET_FROM,
+    FILTER_DATE_SET_TO,
+    FILTER_UPDATE,
+    SHARED_FILTERING_UPDATE
+} from "../actions";
 import {ATTENDANCE_CHART, CARD_ERRORS_CHART, FINALS_CHART, MONEY_WON_CHART} from "../graph-types";
 
 const defaultStartDate = "2000-01-01";
@@ -28,7 +35,8 @@ const state = {
                 from: defaultStartDate,
                 to: defaultEndDate
             }
-        }
+        },
+        shared: false
     }
 };
 
@@ -58,6 +66,9 @@ const getters = {
     },
     filterToDate: state => graphType => {
         return state.filter.dates[graphType].to;
+    },
+    sharedFilter: state => {
+        return state.filter.shared;
     }
 };
 
@@ -84,6 +95,23 @@ const mutations = {
     },
     setFilterDateTo(state, payload) {
         state.filter.dates[payload.graphType].to = payload.toDate;
+    },
+    setSharedFiltering(state, payload) {
+        state.filter.shared = payload;
+    },
+    setFilterDateAllFrom(state, payload) {
+        for (const graph in state.filter.dates) {
+            if (state.filter.dates.hasOwnProperty(graph)) {
+                state.filter.dates[graph].from = payload.fromDate;
+            }
+        }
+    },
+    setFilterDateAllTo(state, payload) {
+        for (const graph in state.filter.dates) {
+            if (state.filter.dates.hasOwnProperty(graph)) {
+                state.filter.dates[graph].to = payload.toDate;
+            }
+        }
     }
 };
 
@@ -111,6 +139,24 @@ const actions = {
             commit('setFilterDateTo', payload);
             resolve();
         });
+    },
+    [SHARED_FILTERING_UPDATE]({commit}, payload) {
+        return new Promise(resolve => {
+            commit('setSharedFiltering', payload);
+            resolve();
+        })
+    },
+    [FILTER_DATE_SET_ALL_FROM]({commit}, payload) {
+        return new Promise(resolve => {
+            commit('setFilterDateAllFrom', payload);
+            resolve();
+        })
+    },
+    [FILTER_DATE_SET_ALL_TO]({commit}, payload) {
+        return new Promise(resolve => {
+            commit('setFilterDateAllTo', payload);
+            resolve();
+        })
     }
 };
 

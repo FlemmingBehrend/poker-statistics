@@ -5,7 +5,7 @@
             <span class="badge badge-light">2= {{totalSecondPrizeMoney}} kr</span>
         </div>
         <money-won-chart :chart-data="dataSet" class="canvas-size"></money-won-chart>
-        <filter-container :graph-type="graphType"></filter-container>
+        <filter-container :graph-type="graphType" v-show="!sharedFiltering"></filter-container>
     </div>
 </template>
 
@@ -27,6 +27,9 @@
             }
         },
         computed: {
+            sharedFiltering() {
+                return this.$store.getters.sharedFilter;
+            },
             totalFirstPrizeMoney() {
                 const winnings = this.$store.getters.winnings(this.graphType);
                 return jmespath.search(winnings, "[*].game.win.prize|sum(@)");

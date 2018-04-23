@@ -1,5 +1,5 @@
 <template>
-    <div class="container container-style">
+    <div class="container">
         <div class="col input-group">
             <div class="input-group-prepend">
                 <button class="btn dropdown-toggle btn-sm right-side" type="button"
@@ -31,7 +31,7 @@
         },
         methods: {
             update() {
-                this.$emit("update-by-pokernight", this.selected);
+                this.$emit("update-all-by-pokernight", this.selected);
             },
             changeToDate() {
                 this.show = "Dato";
@@ -44,11 +44,6 @@
 </script>
 
 <style scoped>
-    .container-style {
-        background-color: beige;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
     .right-side {
         background-color: #EAECEF;
         border-color: #CFD4DB;

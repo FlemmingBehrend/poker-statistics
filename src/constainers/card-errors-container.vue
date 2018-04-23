@@ -4,7 +4,7 @@
             <span class="badge badge-light">{{errorsTotal}}</span>
         </div>
         <errors-chart :chart-data="dataSet" class="canvas-size"></errors-chart>
-        <filter-container :graph-type="graphType"></filter-container>
+        <filter-container :graph-type="graphType" v-show="!sharedFiltering"></filter-container>
     </div>
 </template>
 
@@ -26,6 +26,9 @@
             }
         },
         computed: {
+            sharedFiltering() {
+                return this.$store.getters.sharedFilter;
+            },
             errorsTotal() {
                 const cardErrors = this.$store.getters.cardErrors(this.graphType);
                 return jmespath.search(cardErrors, "[*].ErrorCount|sum(@)");

@@ -1,20 +1,19 @@
-* filter dates moved to vuex
-filter state skal mådke deles op som
+Formkurve
+ - line graph
+ - sidste 10 spil f.eks.
 
-filter: {
-    dates: {
-        attendance: {
-            from:
-            to:
-        },
-        finals: {
-            from:
-            to:
-        },
-        ..
-        ..
+Time Lapse
+ - Knap som sætter en graph i gang for alle spil
+ - Skal understøtte interval
 
-    }
-}
+Head to Head graf
 
-global filtering skal så ændre alle states.
+Filter
+* - På dato
+* - På season
+* - På pokeraftener
+
+Menu
+* - Vælg mellem dato, season eller pokeraften
+ - global filtering skal så ændre alle states.
+

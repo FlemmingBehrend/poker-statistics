@@ -4,7 +4,7 @@
             <span class="badge badge-light">{{numberOfFinals}}</span>
         </div>
         <finals-chart :chart-data="dataSet" class="canvas-size"></finals-chart>
-        <filter-container :graph-type="graphType"></filter-container>
+        <filter-container :graph-type="graphType" v-show="!sharedFiltering"></filter-container>
     </div>
 </template>
 
@@ -27,6 +27,9 @@
             }
         },
         computed: {
+            sharedFiltering() {
+                return this.$store.getters.sharedFilter;
+            },
             dataSet() {
                 const zeroBasedWinnerObj = {};
                 const zeroBasedRunnersUpObj = {};
@@ -40,11 +43,7 @@
                 const winners = Object.assign(zeroBasedWinnerObj, winsById);
                 const runUpById = jmespath.search(games, "[*].GamesPlayed[*][].SecondPlayerId").groupIds();
                 const runnersUp = Object.assign(zeroBasedRunnersUpObj, runUpById);
-                console.log('runnersUp', runnersUp);
-
                 const labels = Object.keys(winners).map(id => this.$store.getters.playerName(id));
-                console.log('labels', labels);
-
                 const firstPlace = Object.keys(winners).map(id => winners[id]);
                 const secondPlace = Object.keys(runnersUp).map(id => runnersUp[id]);
                 const backgroundColors = palette(this.graphColorScheme, 2).map(v => "#"+ v).reverse();

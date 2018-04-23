@@ -1,5 +1,5 @@
 <template>
-    <div class="container-style container">
+    <div class="container row">
         <div class="col">
             <div class="input-group input-group-sm mb-1">
                 <div class="input-group-prepend">
@@ -44,19 +44,14 @@
         },
         methods: {
             updateFromDate() {
-                this.$emit('update-by-from-date', event, this.fromDate);
+                this.$emit('update-all-by-from-date', event, this.fromDate);
             },
             updateToDate() {
-                this.$emit('update-by-to-date', event, this.toDate);
+                this.$emit('update-all-by-to-date', event, this.toDate);
             }
         }
     }
 </script>
 
 <style scoped>
-    .container-style {
-        background-color: beige;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
 </style>

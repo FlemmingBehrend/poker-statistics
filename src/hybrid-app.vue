@@ -6,7 +6,10 @@
                 <div class="navbar-nav mr-auto">
                     <filter-menu-container></filter-menu-container>
                 </div>
-                <span class="nav-item version">v0.3.0</span>
+                <div>
+                    <navbar-filter-container></navbar-filter-container>
+                </div>
+                <span class="nav-item version">v0.4.0</span>
             </div>
         </nav>
         <main role="main" class="container-fluid row">
@@ -27,15 +30,24 @@
     import ErrorsContainer from "./constainers/card-errors-container";
     import FormCurveContainer from "./constainers/form-curve-container";
     import FilterMenuContainer from "./constainers/filter-menu-container";
+    import FilterContainer from "./constainers/filter-container";
+    import NavbarFilterContainer from "./constainers/navbar-filter-container";
 
     export default {
         components: {
+            NavbarFilterContainer,
             FilterMenuContainer,
             FormCurveContainer,
             ErrorsContainer,
             AttendanceContainer,
             FinalsContainer,
             MoneyWonContainer,
+            FilterContainer
+        },
+        computed: {
+            sharedFiltering() {
+                return this.$store.getters.sharedFilter;
+            },
         },
         beforeCreate: function() {
             this.$store.dispatch(PLAYERS_FETCH).then(() => {

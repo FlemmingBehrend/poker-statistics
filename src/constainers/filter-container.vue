@@ -18,7 +18,7 @@
         components: {
             DateFilter,
             PokernightFilter,
-            SeasonFilter
+            SeasonFilter,
         },
         computed: {
             ...mapGetters({

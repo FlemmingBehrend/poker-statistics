@@ -4,7 +4,7 @@
             <span class="badge badge-light">{{numberOfPokernights}}</span>
         </div>
         <attendance-chart :chart-data="dataSet" class="canvas-size"></attendance-chart>
-        <filter-container :graph-type="graphType"></filter-container>
+        <filter-container :graph-type="graphType" v-show="!sharedFiltering"></filter-container>
     </div>
 </template>
 
@@ -26,6 +26,9 @@
             }
         },
         computed: {
+            sharedFiltering() {
+                return this.$store.getters.sharedFilter;
+            },
             numberOfPokernights() {
                 return this.$store.getters.numberOfPokernights(this.graphType);
             },
