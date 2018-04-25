@@ -17,7 +17,7 @@
             <finals-container></finals-container>
             <money-won-container></money-won-container>
             <errors-container></errors-container>
-            <!--<form-curve-container></form-curve-container>-->
+            <form-curve-container></form-curve-container>
         </main>
     </div>
 </template>

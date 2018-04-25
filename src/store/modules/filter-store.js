@@ -6,7 +6,7 @@ import {
     FILTER_UPDATE,
     SHARED_FILTERING_UPDATE
 } from "../actions";
-import {ATTENDANCE_CHART, CARD_ERRORS_CHART, FINALS_CHART, MONEY_WON_CHART} from "../graph-types";
+import {ATTENDANCE_CHART, CARD_ERRORS_CHART, FINALS_CHART, FORM_CURVE, MONEY_WON_CHART} from "../graph-types";
 
 const defaultStartDate = "2000-01-01";
 const defaultEndDate = "2050-01-01";
@@ -34,6 +34,10 @@ const state = {
             [CARD_ERRORS_CHART]: {
                 from: defaultStartDate,
                 to: defaultEndDate
+            },
+            [FORM_CURVE]: {
+                from: "2007-01-01",
+                to: "2020-06-01"
             }
         },
         shared: false

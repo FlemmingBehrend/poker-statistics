@@ -13,6 +13,7 @@
         data() {
             return {
                 options: {
+                    showLines: false,
                     responsive: true,
                 }
             };
