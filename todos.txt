@@ -6,7 +6,14 @@ Time Lapse
  - Knap som sætter en graph i gang for alle spil
  - Skal understøtte interval
 
+Vis
+ - menu hvor man kan klikke de forskellige grafer til og fra
+ - er først nødvendig når der er mange grafer
+ - Vis kun stats for spil man har deltaget i
+
 Head to Head graf
+ - Hvor mange gange to spillere har mødt hinanden i finalen
+ - Bar graf med Y=spiller X=data for finale
 
 Filter
 * - På dato
@@ -17,3 +24,9 @@ Menu
 * - Vælg mellem dato, season eller pokeraften
  - global filtering skal så ændre alle states.
 
+Projekt
+ - omdøb til noget med poker
+ - lav automatisk build og deploy script.
+ - dokumenter
+   - tegning med container pattern
+   - beskriv vuex

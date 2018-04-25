@@ -95,32 +95,6 @@ const getters = {
             }
         }
         return seasonsDates;
-    },
-    formCurve: (state, getters) => {
-        const pokernights = filterByDate(state.games, "2016-01-01", "2016-02-01");
-        const graphType = "moneyWon";
-        let winnings = getters.winnings(graphType);
-/*
-        pokernights.forEach(pokernight => {
-            const gamesCount = pokernight.GamesPlayed.length;
-            const combinedPrizes = pokernight.Info.FirstPrize + pokernight.Info.SecondPrize;
-            const playersCount = pokernight.AttendingPlayerIds.length;
-            const start = combinedPrizes / playersCount;
-            const statsObj = {};
-
-            statsObj.start = start;
-            let players = getters.players;
-            for (const player in players) {
-                let id = players[player].id;
-                const playerStates = {}
-                playerStates[id] = {};
-                for (const gameNo in winnings) {
-
-                }
-            }
-            console.log('game', statsObj);
-        })
-*/
     }
 };
 

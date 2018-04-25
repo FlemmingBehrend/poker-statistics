@@ -1,13 +1,16 @@
 <template>
     <div class="box">
-        <div class="header">Form kurve (sidste 10 pokeraftener)</div>
+        <div class="header">Form kurve</div>
         <form-curve-chart :chartData="dataSet" class="canvas-size"></form-curve-chart>
+        <filter-container :graph-type="graphType" v-show="!sharedFiltering"></filter-container>
     </div>
 </template>
 
 <script>
     import FormCurveChart from "../views/charts/form-curve-chart";
     import palette from "google-palette";
+    import {FORM_CURVE_CHART} from "../store/graph-types";
+    import FilterContainer from "../constainers/filter-container";
 
     function playerStatus1(playerIds) {
         const object = Object.create(Object.prototype);
@@ -20,10 +23,21 @@
     }
 
     export default {
-        components: {FormCurveChart},
+        components: {
+            FormCurveChart,
+            FilterContainer
+        },
+        data() {
+            return {
+                graphType: FORM_CURVE_CHART
+            }
+        },
         computed: {
+            sharedFiltering() {
+                return this.$store.getters.sharedFilter;
+            },
             dataSet() {
-                const winnings = this.$store.getters.winnings("formCurve")
+                const winnings = this.$store.getters.winnings(this.graphType)
                 const playerIds = this.$store.getters.players.map(player => player.id);
                 const dataWinnings = playerStatus1(playerIds);
                 const dataPayment = playerStatus1(playerIds);
@@ -92,6 +106,8 @@
                         label: this.$store.getters.playerName(i),
                         backgroundColor: backgroundColors[i],
                         data: form,
+                        pointRadius: 2,
+                        pointBorderWidth: 0,
                         fill: false
                     })
                 }
