@@ -12,12 +12,13 @@
                 <span class="nav-item version">v0.4.0</span>
             </div>
         </nav>
+        <typewriter-container></typewriter-container>
         <main role="main" class="container-fluid row">
             <attendance-container></attendance-container>
             <finals-container></finals-container>
             <money-won-container></money-won-container>
             <errors-container></errors-container>
-            <form-curve-container></form-curve-container>
+            <!--<form-curve-container></form-curve-container>-->
         </main>
     </div>
 </template>
@@ -32,6 +33,7 @@
     import FilterMenuContainer from "./constainers/filter-menu-container";
     import FilterContainer from "./constainers/filter-container";
     import NavbarFilterContainer from "./constainers/navbar-filter-container";
+    import TypewriterContainer from "./constainers/typewriter-container";
 
     export default {
         components: {
@@ -42,7 +44,8 @@
             AttendanceContainer,
             FinalsContainer,
             MoneyWonContainer,
-            FilterContainer
+            FilterContainer,
+            TypewriterContainer
         },
         computed: {
             sharedFiltering() {
