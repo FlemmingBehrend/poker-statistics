@@ -25,9 +25,13 @@ const getters = {
         return filterByDate(state.games, from, to).length;
     },
     games: (state, getters) => graphType =>{
+        if (!graphType) return state.games;
         const from = getters.filterFromDate(graphType);
         const to = getters.filterToDate(graphType);
         return filterByDate(state.games, from, to);
+    },
+    wins: state => (player, opponent) => {
+        return jmespath.search(state.games, 'length([*].GamesPlayed[?WinnerPlayerId==`4`][]|[?SecondPlayerId==`2`])');
     },
     winnings: (state, getters) => graphType => {
         const from = getters.filterFromDate(graphType);
