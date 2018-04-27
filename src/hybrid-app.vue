@@ -9,7 +9,7 @@
                 <div>
                     <navbar-filter-container></navbar-filter-container>
                 </div>
-                <span class="nav-item version">v0.4.0</span>
+                <span class="nav-item version">v0.5.0</span>
             </div>
         </nav>
         <typewriter-container></typewriter-container>

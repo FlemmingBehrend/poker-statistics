@@ -6,10 +6,17 @@ const state = {
 };
 
 const getters = {
-    players(state) {
+    players: state => {
         return state.players;
     },
-    numberOfPlayers(state) {
+    playerIds: state => {
+        const ids = [];
+        for (let i=1; i<state.players.length+1; i++) {
+            ids.push(i);
+        }
+        return ids;
+    },
+    numberOfPlayers: state => {
         return state.players.length;
     },
     playerName: state => id => {

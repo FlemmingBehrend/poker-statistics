@@ -11,19 +11,23 @@
             const createMessage = (winner, winAmount, loser, lossAmount) => {
                 const winnerName = this.$store.getters.playerName(winner);
                 const loserName = this.$store.getters.playerName(loser);
-                return `${winnerName} og ${loserName} har mødt hinanden ${winAmount + lossAmount} gange i finalen,
+                let firstName, lastName;
+                if (Math.random() >= 0.5) {
+                    firstName = winnerName;
+                    lastName = loserName;
+                } else {
+                    firstName = loserName;
+                    lastName = winnerName;
+                }
+                return `${firstName} og ${lastName} har mødt hinanden ${winAmount + lossAmount} gange i finalen,
                        <strong>${winnerName}</strong> har vundet ${winAmount} af dem`
             };
             const getNewText = () => {
-                const numberOfPlayers = this.$store.getters.numberOfPlayers;
+                const playerIds = this.$store.getters.playerIds;
+                const playerOne = playerIds[Math.floor(Math.random() * playerIds.length)];
+                const filteredPlayerIds = playerIds.filter(id => id != playerOne);
+                const playerTwo = filteredPlayerIds[Math.floor(Math.random() * filteredPlayerIds.length)];
                 const games = this.$store.getters.games();
-                let playerOne = Math.round(Math.random() * numberOfPlayers);
-                let playerTwo = Math.round(Math.random() * numberOfPlayers);
-                if (playerOne === playerTwo) {
-                    if (playerOne < 10) {
-                        playerOne = playerOne - 1;
-                    }
-                }
                 const playerOneWins = jmespath.search(games, 'length([*].GamesPlayed[?WinnerPlayerId==`'+ playerOne +'`][]|[?SecondPlayerId==`'+ playerTwo +'`])');
                 const playerTwoWins = jmespath.search(games, 'length([*].GamesPlayed[?WinnerPlayerId==`'+ playerTwo +'`][]|[?SecondPlayerId==`'+ playerOne +'`])');
                 if (playerOneWins > playerTwoWins) {
@@ -34,11 +38,11 @@
                     return [msg];
                 }
             };
-            let text = ['Stats will be displayed here !!'];
+            let text = ['Hvem vinder over hvem????'];
             this.instance = new TypeIt('#typewriter', {
                 beforeString: (step, queue, instance) => {
                     text = getNewText();
-                    instance.pause(3000).delete();
+                    instance.pause(1000).delete();
                 },
                 speed: 100,
                 strings: text,
