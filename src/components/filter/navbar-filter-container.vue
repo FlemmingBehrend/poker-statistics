@@ -12,10 +12,10 @@
 
 <script>
     import {mapGetters} from 'vuex';
-    import NavbarDateFilter from '../views/menu/navbar-date-filter';
-    import {FILTER_DATE_SET_ALL_FROM, FILTER_DATE_SET_ALL_TO} from "../store/actions";
-    import NavbarPokernightFilter from "../views/menu/navbar-pokernight-filter";
-    import NavbarSeasonFilter from "../views/menu/navbar-season-filter";
+    import NavbarDateFilter from './navbar-date-filter';
+    import {FILTER_DATE_SET_ALL_FROM, FILTER_DATE_SET_ALL_TO} from "../../store/actions";
+    import NavbarPokernightFilter from "./navbar-pokernight-filter";
+    import NavbarSeasonFilter from "./navbar-season-filter";
 
     export default {
         components: {

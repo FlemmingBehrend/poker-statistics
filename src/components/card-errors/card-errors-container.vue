@@ -9,11 +9,11 @@
 </template>
 
 <script>
-    import ErrorsChart from "../views/charts/card-errors-chart";
+    import ErrorsChart from "./card-errors-chart";
     import palette from "google-palette";
     import jmespath  from "jmespath";
-    import FilterContainer from "./filter-container";
-    import {CARD_ERRORS_CHART} from "../store/graph-types";
+    import FilterContainer from "../filter/filter-container";
+    import {CARD_ERRORS_CHART} from "../../store/graph-types";
 
     export default {
         components: {

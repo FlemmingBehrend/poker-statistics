@@ -9,11 +9,11 @@
 </template>
 
 <script>
-    import AttendanceChart from "../views/charts/attendance-chart";
+    import AttendanceChart from "./attendance-chart";
     import jmespath from "jmespath";
     import palette from "google-palette";
-    import FilterContainer from "./filter-container";
-    import {ATTENDANCE_CHART} from "../store/graph-types";
+    import FilterContainer from "../filter/filter-container";
+    import {ATTENDANCE_CHART} from "../../store/graph-types";
 
     export default {
         components: {

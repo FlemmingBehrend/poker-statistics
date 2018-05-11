@@ -4,8 +4,8 @@
 </template>
 
 <script>
-    import FilterMenu from "../views/menu/filter-menu";
-    import {FILTER_DATE_RESET, FILTER_UPDATE, SHARED_FILTERING_UPDATE} from "../store/actions";
+    import FilterMenu from "./filter-menu";
+    import {FILTER_DATE_RESET, FILTER_UPDATE, SHARED_FILTERING_UPDATE} from "../../store/actions";
 
     export default {
         components: {

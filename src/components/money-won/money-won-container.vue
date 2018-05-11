@@ -10,11 +10,11 @@
 </template>
 
 <script>
-    import MoneyWonChart from "../views/charts/money-won-chart";
-    import FilterContainer from "./filter-container";
+    import MoneyWonChart from "./money-won-chart";
+    import FilterContainer from "../filter/filter-container";
     import palette from "google-palette";
     import jmespath  from "jmespath";
-    import {MONEY_WON_CHART} from "../store/graph-types";
+    import {MONEY_WON_CHART} from "../../store/graph-types";
 
     export default {
         components: {

@@ -7,10 +7,10 @@
 </template>
 
 <script>
-    import FormCurveChart from "../views/charts/form-curve-chart";
+    import FormCurveChart from "./form-curve-chart";
     import palette from "google-palette";
-    import {FORM_CURVE_CHART} from "../store/graph-types";
-    import FilterContainer from "../constainers/filter-container";
+    import {FORM_CURVE_CHART} from "../../store/graph-types";
+    import FilterContainer from "../filter/filter-container";
 
     function playerStatus1(playerIds) {
         const object = Object.create(Object.prototype);

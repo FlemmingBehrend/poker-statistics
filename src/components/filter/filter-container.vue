@@ -8,10 +8,10 @@
 
 <script>
     import {mapGetters} from 'vuex';
-    import DateFilter from '../views/filters/date-filter';
-    import PokernightFilter from '../views/filters/pokernight-filter';
-    import SeasonFilter from '../views/filters/season-filter';
-    import {FILTER_DATE_SET_FROM, FILTER_DATE_SET_TO} from "../store/actions";
+    import DateFilter from './date-filter';
+    import PokernightFilter from './pokernight-filter';
+    import SeasonFilter from './season-filter';
+    import {FILTER_DATE_SET_FROM, FILTER_DATE_SET_TO} from "../../store/actions";
 
     export default {
         props: ['graphType'],

@@ -25,15 +25,15 @@
 
 <script>
     import {GAMES_FETCH, PLAYERS_FETCH} from "./store/actions";
-    import AttendanceContainer from "./constainers/attendance-container";
-    import FinalsContainer from "./constainers/finals-container";
-    import MoneyWonContainer from "./constainers/money-won-container";
-    import ErrorsContainer from "./constainers/card-errors-container";
-    import FormCurveContainer from "./constainers/form-curve-container";
-    import FilterMenuContainer from "./constainers/filter-menu-container";
-    import FilterContainer from "./constainers/filter-container";
-    import NavbarFilterContainer from "./constainers/navbar-filter-container";
-    import TypewriterContainer from "./constainers/typewriter-container";
+    import AttendanceContainer from "./components/attendance/attendance-container";
+    import FinalsContainer from "./components/finals/finals-container";
+    import MoneyWonContainer from "./components/money-won/money-won-container";
+    import ErrorsContainer from "./components/card-errors/card-errors-container";
+    import FormCurveContainer from "./components/form-curve/form-curve-container";
+    import FilterMenuContainer from "./components/filter/filter-menu-container";
+    import FilterContainer from "./components/filter/filter-container";
+    import NavbarFilterContainer from "./components/filter/navbar-filter-container";
+    import TypewriterContainer from "./components/typewriter/typewriter-container";
 
     export default {
         components: {

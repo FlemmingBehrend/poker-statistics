@@ -9,11 +9,11 @@
 </template>
 
 <script>
-    import FinalsChart from "../views/charts/finals-chart";
+    import FinalsChart from "./finals-chart";
     import palette from "google-palette";
     import jmespath from "jmespath";
-    import FilterContainer from "./filter-container";
-    import {FINALS_CHART} from "../store/graph-types";
+    import FilterContainer from "../filter/filter-container";
+    import {FINALS_CHART} from "../../store/graph-types";
 
     export default {
         components: {
