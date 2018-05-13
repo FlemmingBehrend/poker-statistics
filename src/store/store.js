@@ -3,6 +3,7 @@ import Vuex from "vuex";
 import gameStore from "./modules/game-store";
 import playerStore from "./modules/player-store";
 import filterStore from "./modules/filter-store";
+import versionStore from "./modules/version-store";
 
 Vue.use(Vuex);
 Vue.config.debug = true;
@@ -14,7 +15,8 @@ const store = new Vuex.Store({
     modules: {
         gameStore,
         playerStore,
-        filterStore
+        filterStore,
+        versionStore
     }
 });
 

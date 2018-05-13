@@ -9,7 +9,7 @@
                 <div>
                     <navbar-filter-container></navbar-filter-container>
                 </div>
-                <span class="nav-item version">v0.5.0</span>
+                <version-container class="nav-item version"></version-container>
             </div>
         </nav>
         <typewriter-container></typewriter-container>
@@ -25,6 +25,7 @@
 
 <script>
     import {GAMES_FETCH, PLAYERS_FETCH} from "./store/actions";
+    import VersionContainer from "./components/versions/version-container";
     import AttendanceContainer from "./components/attendance/attendance-container";
     import FinalsContainer from "./components/finals/finals-container";
     import MoneyWonContainer from "./components/money-won/money-won-container";
@@ -37,6 +38,7 @@
 
     export default {
         components: {
+            VersionContainer,
             NavbarFilterContainer,
             FilterMenuContainer,
             FormCurveContainer,
